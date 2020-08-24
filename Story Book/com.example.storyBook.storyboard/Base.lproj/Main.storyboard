@@ -1273,6 +1273,9 @@
                                         <state key="normal" title="Share">
                                             <color key="titleColor" name="SignUp_TextFieldFont_Color"/>
                                         </state>
+                                        <connections>
+                                            <action selector="shareButtonDidTouch" destination="Gjc-NI-Oja" eventType="touchUpInside" id="J6V-bj-PbF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="Tabbar_Background_Color"/>
