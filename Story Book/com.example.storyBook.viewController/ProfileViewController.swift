@@ -77,6 +77,15 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate {
     
     let data : [UIImage] = [UIImage(named: "Example")!,UIImage(named: "Example")!,UIImage(named: "Example")!,UIImage(named: "Example")!]
     
+    //Added the profileFeed proparty value from ProfileModel.
+    var userProfileRef : DatabaseReference? {
+        
+        guard let userId = Auth.auth().currentUser?.uid else { return nil}
+        
+        return ProfileModel.profileFeeds.child(userId)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
