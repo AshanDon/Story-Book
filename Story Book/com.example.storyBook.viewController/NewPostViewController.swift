@@ -12,6 +12,10 @@ import AVFoundation
 
 import GooglePlaces
 
+import FirebaseAuth
+
+import FirebaseStorage
+
 class NewPostViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
@@ -37,6 +41,10 @@ class NewPostViewController: UIViewController {
     private var avPlayerLayer = AVPlayerLayer()
     
     public var capturedDelegate : CapturedManagerDelegate?
+    
+    private var storageUploadTask : StorageUploadTask?
+    
+    private let tagPepoleList = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +125,109 @@ class NewPostViewController: UIViewController {
         }
     }
     
+    private func uploadNewPost(){
+        print("ok ok ok ")
+        guard let captureImageData = capturedImage else { return }
+        
+        guard let caption = postTextView.text else { return }
+        
+        if let user = Auth.auth().currentUser {
+            
+            let imageId : String = UUID().uuidString.lowercased().replacingOccurrences(of: "-", with: "_")
+            
+            let imageName = "\(imageId).jpg"
+            
+            let pathOfPostImage = "postImage/\(user.uid)/\(imageName)"
+            
+            let storageReference = Storage.storage().reference(withPath: pathOfPostImage)
+            
+            let metaData = StorageMetadata()
+            
+            metaData.contentType = "image/jpg"
+            
+            storageUploadTask = storageReference.putData(captureImageData, metadata: metaData, completion: { [weak self] (storageMetaData, error) in
+                
+                guard let strongeSelf = self else { return }
+                
+                if let error = error {
+                    
+                    print(error.localizedDescription)
+                    
+                    if let languageResouce = strongeSelf.localizResoce {
+                        
+                        let errorTitle = LanguageLocalization.shared.genaretedLanguageLocalization(languageResouce: languageResouce, identification: "UPLOADED_ERROR_TITLE")
+                        
+                        let errorMessage = LanguageLocalization.shared.genaretedLanguageLocalization(languageResouce: languageResouce, identification: "UPLOADED_ERROR_MESSAGE")
+                        
+                        let okAction = LanguageLocalization.shared.genaretedLanguageLocalization(languageResouce: languageResouce, identification: "OK_ALERT")
+                        
+                        
+                        let errorAlert = Validation.errorAlert(errorTitle, errorMessage, okAction)
+                        
+                        DispatchQueue.main.async {
+                            
+                            strongeSelf.present(errorAlert, animated: true, completion: nil)
+                            
+                        }
+                    }
+                    
+                } else {
+                    
+                    storageReference.downloadURL { (url, error) in
+                        
+                        if let url = url,error == nil {
+                            
+                            //ProfileModel.collection.child(user.uid).updateChildValues(["profile_Image" : url.absoluteString])
+                            let locationCellIndexPath = IndexPath(item: 0, section: 1)
+                            
+                            if let cell = strongeSelf.mainTableView.cellForRow(at: locationCellIndexPath) as? AddLocationViewCell {
+                            
+                                if cell.addLocationLabel.text != "", let locationName = cell.addLocationLabel.text {
+                                    print("location \(locationName)")
+                                    Post.newPost(userId: user.uid, caption: caption, imageDownloadURL: url.absoluteString, location: locationName, tagPepole: strongeSelf.tagPepoleList)
+                                }
+                            
+                            }
+                            
+                        } else {
+                            
+                            if let languageResouce = strongeSelf.localizResoce {
+                                
+                                let errorTitle = LanguageLocalization.shared.genaretedLanguageLocalization(languageResouce: languageResouce, identification: "UPLOADED_ERROR_TITLE")
+                                
+                                let errorMessage = LanguageLocalization.shared.genaretedLanguageLocalization(languageResouce: languageResouce, identification: "UPLOADED_ERROR_MESSAGE")
+                                
+                                let okAction = LanguageLocalization.shared.genaretedLanguageLocalization(languageResouce: languageResouce, identification: "OK_ALERT")
+                                
+                                
+                                let errorAlert = Validation.errorAlert(errorTitle, errorMessage, okAction)
+                                
+                                DispatchQueue.main.async {
+                                    
+                                    strongeSelf.present(errorAlert, animated: true, completion: nil)
+                                    
+                                }
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                    
+                    
+                }
+            })
+            
+        }
+            
+        
+    }
+    
+    @IBAction func shareButtonDidTouch() {
+        
+        uploadNewPost()
+        
+    }
 }
 
 extension NewPostViewController : UITableViewDelegate,UITableViewDataSource {
