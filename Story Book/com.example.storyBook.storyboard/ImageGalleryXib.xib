@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ImageGalleryCollectionViewCell" customModule="Story_Book" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALH-ra-pFr">
+                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryBook" translatesAutoresizingMaskIntoConstraints="NO" id="23e-5z-Ilq">
+                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="23e-5z-Ilq" secondAttribute="height" multiplier="1:1" id="gD3-HT-E8V"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="23e-5z-Ilq" firstAttribute="leading" secondItem="ALH-ra-pFr" secondAttribute="leading" id="3lw-rC-F0R"/>
+                        <constraint firstItem="23e-5z-Ilq" firstAttribute="top" secondItem="ALH-ra-pFr" secondAttribute="top" id="iFe-Nb-Iyp"/>
+                        <constraint firstAttribute="width" priority="750" constant="170" id="xfG-zI-iAr"/>
+                        <constraint firstAttribute="trailing" secondItem="23e-5z-Ilq" secondAttribute="trailing" id="yyU-eS-s32"/>
+                        <constraint firstAttribute="bottom" secondItem="23e-5z-Ilq" secondAttribute="bottom" id="z7R-KP-lep"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ALH-ra-pFr" secondAttribute="bottom" id="F2q-q7-KMT"/>
+                <constraint firstItem="ALH-ra-pFr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OEg-dE-52p"/>
+                <constraint firstItem="ALH-ra-pFr" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="XcL-E1-Phw"/>
+                <constraint firstItem="ALH-ra-pFr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="sOr-CT-fb2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageGalleryView" destination="ALH-ra-pFr" id="DsQ-qZ-FPA"/>
+                <outlet property="imageView" destination="23e-5z-Ilq" id="3By-d2-ZBd"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="153.2608695652174"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="StoryBook" width="123" height="124"/>
+    </resources>
+</document>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SenderMessgeCell" rowHeight="314" id="KGk-i7-Jjw" customClass="SenderMessageViewCell" customModule="Story_Book" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tabbar_Profile_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="tYe-Pc-856">
+                        <rect key="frame" x="389" y="4" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="tYe-Pc-856" secondAttribute="height" multiplier="1:1" id="036-j5-eK6"/>
+                            <constraint firstAttribute="width" constant="25" id="2sP-wa-YbW"/>
+                            <constraint firstAttribute="height" constant="25" id="wUA-sG-B95"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5Q-qh-rhl">
+                        <rect key="frame" x="234" y="4" width="147" height="61"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="240" verticalCompressionResistancePriority="740" text="Hi" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSf-I5-6P9">
+                                <rect key="frame" x="5" y="0.0" width="137" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="dgd-aC-dlQ"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="pou-O9-3u0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Delivered" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL8-AX-Cse">
+                                <rect key="frame" x="76.5" y="41" width="65.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="12"/>
+                                <color key="textColor" name="ChatHeader_TimeLabelFont_Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="4:50 PM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmM-Ux-Q1A">
+                                <rect key="frame" x="91" y="28" width="51" height="13"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="12"/>
+                                <color key="textColor" name="ChatHeader_TimeLabelFont_Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QSf-I5-6P9" firstAttribute="leading" secondItem="x5Q-qh-rhl" secondAttribute="leading" constant="5" id="6Hx-Fs-lrb"/>
+                            <constraint firstItem="jmM-Ux-Q1A" firstAttribute="top" secondItem="QSf-I5-6P9" secondAttribute="bottom" id="7NE-M8-FtX"/>
+                            <constraint firstItem="QSf-I5-6P9" firstAttribute="leading" secondItem="x5Q-qh-rhl" secondAttribute="leading" constant="5" id="8Cr-QM-NFC"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="8FB-0U-cfS"/>
+                            <constraint firstItem="mL8-AX-Cse" firstAttribute="leading" secondItem="jmM-Ux-Q1A" secondAttribute="trailing" constant="-65.5" id="9H0-Ac-Tjx"/>
+                            <constraint firstItem="QSf-I5-6P9" firstAttribute="leading" relation="lessThanOrEqual" secondItem="x5Q-qh-rhl" secondAttribute="leading" constant="65.5" id="NsF-Xx-hJu"/>
+                            <constraint firstAttribute="trailing" secondItem="mL8-AX-Cse" secondAttribute="trailing" constant="5" id="OYZ-Pw-44A"/>
+                            <constraint firstItem="QSf-I5-6P9" firstAttribute="top" secondItem="x5Q-qh-rhl" secondAttribute="top" id="OoD-0o-Pix"/>
+                            <constraint firstItem="QSf-I5-6P9" firstAttribute="top" secondItem="x5Q-qh-rhl" secondAttribute="top" id="Qk5-PS-l8K"/>
+                            <constraint firstAttribute="bottom" secondItem="jmM-Ux-Q1A" secondAttribute="bottom" constant="20" id="TdR-MB-vCF"/>
+                            <constraint firstAttribute="bottom" secondItem="QSf-I5-6P9" secondAttribute="bottom" constant="33" id="Yt3-D3-pvb"/>
+                            <constraint firstItem="QSf-I5-6P9" firstAttribute="leading" relation="lessThanOrEqual" secondItem="x5Q-qh-rhl" secondAttribute="leading" constant="65.5" id="f9B-Xd-J56"/>
+                            <constraint firstAttribute="bottom" secondItem="mL8-AX-Cse" secondAttribute="bottom" id="fwi-As-Tq6"/>
+                            <constraint firstAttribute="trailing" secondItem="QSf-I5-6P9" secondAttribute="trailing" constant="5" id="lLf-XR-s1J"/>
+                            <constraint firstItem="mL8-AX-Cse" firstAttribute="top" secondItem="QSf-I5-6P9" secondAttribute="bottom" constant="13" id="nwB-0b-aQA"/>
+                            <constraint firstItem="QSf-I5-6P9" firstAttribute="leading" relation="lessThanOrEqual" secondItem="x5Q-qh-rhl" secondAttribute="leading" constant="8" id="ydj-CV-hJ3"/>
+                            <constraint firstItem="QSf-I5-6P9" firstAttribute="leading" secondItem="x5Q-qh-rhl" secondAttribute="leading" constant="26" id="zG9-ou-wVc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6Hx-Fs-lrb"/>
+                                <exclude reference="NsF-Xx-hJu"/>
+                                <exclude reference="f9B-Xd-J56"/>
+                                <exclude reference="ydj-CV-hJ3"/>
+                                <exclude reference="zG9-ou-wVc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tYe-Pc-856" firstAttribute="leading" secondItem="x5Q-qh-rhl" secondAttribute="trailing" constant="8" id="5X9-iL-QcG"/>
+                    <constraint firstAttribute="bottom" secondItem="x5Q-qh-rhl" secondAttribute="bottom" constant="17" id="6HJ-Ih-HMb"/>
+                    <constraint firstAttribute="bottom" secondItem="x5Q-qh-rhl" secondAttribute="bottom" id="JYs-BC-qQx"/>
+                    <constraint firstItem="x5Q-qh-rhl" firstAttribute="top" secondItem="tYe-Pc-856" secondAttribute="top" id="Si9-Vf-uh6"/>
+                    <constraint firstItem="tYe-Pc-856" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="VqR-4I-Ue1"/>
+                    <constraint firstAttribute="trailing" secondItem="tYe-Pc-856" secondAttribute="trailing" id="X5d-HH-yW9"/>
+                    <constraint firstItem="x5Q-qh-rhl" firstAttribute="leading" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="234" id="eKp-vb-dmG"/>
+                    <constraint firstItem="x5Q-qh-rhl" firstAttribute="leading" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="145" id="gxS-Qk-zSj"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="6HJ-Ih-HMb"/>
+                        <exclude reference="gxS-Qk-zSj"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="messageReportLabel" destination="mL8-AX-Cse" id="tKl-U1-BoR"/>
+                <outlet property="sendMessageBody" destination="QSf-I5-6P9" id="2Fy-WU-AOd"/>
+                <outlet property="senderMessageView" destination="x5Q-qh-rhl" id="Q8Z-4u-cal"/>
+                <outlet property="senderProfilePicture" destination="tYe-Pc-856" id="rH6-DV-GNJ"/>
+            </connections>
+            <point key="canvasLocation" x="-37.681159420289859" y="254.12946428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Tabbar_Profile_Icon" width="38" height="39"/>
+        <namedColor name="ChatHeader_TimeLabelFont_Color">
+            <color red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

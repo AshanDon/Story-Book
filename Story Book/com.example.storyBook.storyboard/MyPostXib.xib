@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFill" id="iN0-l3-epB" customClass="MyPostCollectionViewCell" customModule="Story_Book" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="190"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8o-0g-f3J">
+                    <rect key="frame" x="0.0" y="0.0" width="353" height="190"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Example" translatesAutoresizingMaskIntoConstraints="NO" id="MRc-x5-neO">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="190"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="353" id="6Ng-j5-8Zr"/>
+                        <constraint firstItem="MRc-x5-neO" firstAttribute="centerX" secondItem="m8o-0g-f3J" secondAttribute="centerX" id="i2r-ka-10Y"/>
+                        <constraint firstItem="MRc-x5-neO" firstAttribute="height" secondItem="m8o-0g-f3J" secondAttribute="height" multiplier="0.673684" constant="62" id="koB-YM-qWb"/>
+                        <constraint firstItem="MRc-x5-neO" firstAttribute="centerY" secondItem="m8o-0g-f3J" secondAttribute="centerY" id="pAG-ib-kT6"/>
+                        <constraint firstItem="MRc-x5-neO" firstAttribute="width" secondItem="m8o-0g-f3J" secondAttribute="width" multiplier="0.679887" constant="113" id="qCB-Yo-73B"/>
+                        <constraint firstAttribute="height" constant="190" id="qdH-q8-Wnk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="m8o-0g-f3J" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="0EI-34-2ba"/>
+                <constraint firstItem="m8o-0g-f3J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="cYe-t7-IQT"/>
+                <constraint firstItem="m8o-0g-f3J" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="eXJ-lE-CtP"/>
+                <constraint firstItem="m8o-0g-f3J" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="iSv-k4-3S3"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="myPostImageView" destination="MRc-x5-neO" id="MVK-aV-rS0"/>
+            </connections>
+            <point key="canvasLocation" x="286.23188405797106" y="180.16304347826087"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Example" width="1080" height="720"/>
+    </resources>
+</document>

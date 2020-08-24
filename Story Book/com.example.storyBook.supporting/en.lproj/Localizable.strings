@@ -1,0 +1,119 @@
+/* 
+  Localizable.strings
+  Story Book
+
+  Created by Ashan Anuruddika on 6/21/20.
+  Copyright © 2020 Ashan. All rights reserved.
+*/
+//Mark :- SIGNIN PAGE English localization identification and values.
+"SOCIAL_MEDIA_TITLE" = "Follow us on";
+"USER_NAME_OR_EMAIL" = "Email";
+"PASSWORD" = "Password";
+"SIGNINBUTTON" = "SignIn";
+"SIGNUPBUTTON" = "SignUp";
+"ORLABEL" = "or";
+
+"EMPTY_USERNAME_TEXT_FIELD" = "Please enter a user name or email.";
+"EMPTY_PASSWORD_TEXT_FIELD" = "Please enter a password.";
+
+
+//Mark :- SIGNUP PAGE English localization identification and values.
+"TITLE_OF_SIGNUP_PAGE" = "Sign Up";
+"FIRST_NAME" = "  First Name";
+"LAST_NAME" = "  Last Name";
+"EMAIL" = "  Email";
+"DATE_OF_BIRTH" = "  Date of Birth";
+"COUNTRY" = "  Country";
+"PASSWORD" = "  Password";
+"RETYPE_PASSWORD" = "  Retype Password";
+"SIGNUP_BUTTON" = "  Sign Up";
+
+"EMPTY_FIRSTNAME_FIELD" = "Your first name is required.";
+"EMPTY_LASTNAME_FIELD" = "Your last name is required.";
+"EMPTY_EMAIL_FIELD" = "Your valid email is required.";
+"EMPTY_BIRTHDAY_FIELD" = "Your date of birth is required.";
+"EMPTY_COUNTRY_FIELD" = "Your country is required.";
+"EMPTY_PASSWORD_FIELD" = "Please enter a valid password.";
+"EMPTY_RETYPEPASSWORD_FIELD" = "Please re-enter a password.";
+
+
+//MARK :- Capture View English localization identification and values.
+"TITLE_PHOTO" = "Photo";
+"TITLE_VIDEO" = "Video";
+
+//MARK :- Capture View English localization identification and values.
+"NEWPOST_TITLE" = "New Post";
+"WRITE_A_CAPTION" = "Write a caption...";
+"TAG_PEOPLE" = "Tag People";
+"ADD_LOCATION" = "Add Location";
+
+//MARK :- Home View English localization identification and values.
+"HOME_TITLE" = "Home";
+
+//MARK :- Media View English localization identification and values.
+"MEDIA_TITLE" = "Media";
+
+//MARK :- Notification View English localization identification and values.
+"NOTIFICATION_TITLE" = "Notification";
+
+//MARK :- ChatList View English localization identification and values.
+"CHATLIST_TITLE" = "Chat List";
+"CHATLIST_SEARCH" = "Search";
+
+//Mark :- Profile View Sinhala localization identification and values.
+"POST_LABEL" = "Post";
+"FOLLOWER_LABEL" = "Followers";
+"FOLLOWING_LABEL" = "Following";
+
+//Mark :- Add to ~Story View english localization identification and values.
+"ADD_STORY" = "Add to Story";
+
+//Mark :- Alert Action English localization identification and values.
+"OK_ALERT" = "Ok";
+"WARNING" = "Warning.";
+"CANCEL_BUTTON" = "Cancel";
+"NEXT_BUTTON" = "Next";
+"BACK_BUTTON" = "Back";
+"SHARE_BUTTON" = "Share";
+"LIBRARY_OPTION" = "Import from Library";
+"TAKEPHOTO_OPTION" = "Take Photo";
+"CANCEL_UPLOAD" = "Cancel Upload";
+
+//Mark :- Location English localization identification and values.
+"LOCATION" = "Location";
+
+
+//Mark :- Bar Button localization identification and values.
+
+"DONE_BARBUTTON_ITEM" = "Done";
+
+"CANCEL_BARBUTTON_ITEM" = "Cancel";
+
+//Mark :- Notification localization identification and values.
+
+"PASSWORD_NOT_MATCH" = "Your password doesn't match.";
+
+"SIGNIN_ERROR_TITLE" = "SignIn Error";
+"SIGNIN_ERROR_MESSAGE" = "There was a problem logging in";
+
+"SIGNIN_INVALID_EMAIL" = "Invalid Email";
+"SIGNIN_INVALIDEMAIL_MESSAGE" = "Please enter a valid email or user name.";
+
+"SIGNIN_WRONG_PASSWORD" = "Wrong Password";
+"SIGNIN_WRONGPASSWORD_MESSAGE" = "The password you entered is wrong.";
+
+"SIGNUP_ERROR_TITLE" = "SignUp Error";
+"SIGNUP_ERROR_MESSAGE" = "There was a problem signing up";
+
+"SIGNUP_ALREADY_EMAIL" = "Email Already in user";
+"SIGNUP_ALREADYEMAIL_MESSAGE" = "Please provide a different email.";
+
+"SIGNUP_WEAK_PASSWORD" = "Weak Password";
+"SIGNUP_WEAKPASSWORD_MESSAGE" = "Password must be at least 6 characters";
+
+"CHANGE_PROFILE_TITLE" = "Change Profile";
+"CHANGE_PROFILE_MESSAGE" = "Choose an option to change your profile photo.";
+
+"UPLOADED_ERROR_TITLE" = "Uploaded Error";
+"UPLOADED_ERROR_MESSAGE" = "There was a problam uploading the image.";
+

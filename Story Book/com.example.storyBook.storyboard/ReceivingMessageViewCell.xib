@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReceivingMessageCell" rowHeight="71" id="KGk-i7-Jjw" customClass="ReceivingMessageViewCell" customModule="Story_Book" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tabbar_Profile_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="GUv-lB-0IL">
+                        <rect key="frame" x="0.0" y="4" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="GUv-lB-0IL" secondAttribute="height" multiplier="1:1" id="18C-EM-DpQ"/>
+                            <constraint firstAttribute="width" constant="25" id="2yh-Hf-ji6"/>
+                            <constraint firstAttribute="height" constant="25" id="ijN-sE-rLj"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lY1-dJ-gAd">
+                        <rect key="frame" x="29" y="4" width="61" height="38"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="240" verticalCompressionResistancePriority="740" text="Hi." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ul-rO-dFq">
+                                <rect key="frame" x="5" y="0.0" width="22" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="Vug-u0-LQD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="FEJ-J2-efj"/>
+                            <constraint firstAttribute="bottom" secondItem="3ul-rO-dFq" secondAttribute="bottom" constant="11" id="NKC-FF-YMO"/>
+                            <constraint firstItem="3ul-rO-dFq" firstAttribute="top" secondItem="lY1-dJ-gAd" secondAttribute="top" id="bmt-eg-t4U"/>
+                            <constraint firstAttribute="trailing" secondItem="3ul-rO-dFq" secondAttribute="trailing" constant="34" id="xWP-5a-4O9"/>
+                            <constraint firstItem="3ul-rO-dFq" firstAttribute="leading" secondItem="lY1-dJ-gAd" secondAttribute="leading" constant="5" id="z1d-me-w6V"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:56PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7Q-ub-071">
+                        <rect key="frame" x="41" y="31" width="43.5" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="11" id="QYC-3z-lfX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="12"/>
+                        <color key="textColor" name="ChatHeader_TimeLabelFont_Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3ul-rO-dFq" firstAttribute="trailing" secondItem="P7Q-ub-071" secondAttribute="trailing" constant="-28.5" id="7XG-l3-r7C"/>
+                    <constraint firstAttribute="bottom" secondItem="lY1-dJ-gAd" secondAttribute="bottom" id="95a-DU-wIl"/>
+                    <constraint firstItem="lY1-dJ-gAd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="BhM-Ch-LMY"/>
+                    <constraint firstItem="GUv-lB-0IL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="EME-e6-7Vm"/>
+                    <constraint firstItem="GUv-lB-0IL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XiS-pN-qIT"/>
+                    <constraint firstAttribute="bottom" secondItem="P7Q-ub-071" secondAttribute="bottom" id="ZCq-fM-Qqs"/>
+                    <constraint firstItem="lY1-dJ-gAd" firstAttribute="leading" secondItem="GUv-lB-0IL" secondAttribute="trailing" constant="4" id="lAt-CC-7kL"/>
+                    <constraint firstItem="P7Q-ub-071" firstAttribute="top" secondItem="3ul-rO-dFq" secondAttribute="bottom" id="xdB-6N-gcV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="receiverMessageLabel" destination="3ul-rO-dFq" id="1wa-hK-yyR"/>
+                <outlet property="receiverProfileImage" destination="GUv-lB-0IL" id="1P4-Nl-d3S"/>
+                <outlet property="receivingMessageBody" destination="lY1-dJ-gAd" id="dA4-jf-vDh"/>
+                <outlet property="receivingTimeLabel" destination="P7Q-ub-071" id="6x9-vZ-L5l"/>
+            </connections>
+            <point key="canvasLocation" x="343.47826086956525" y="162.05357142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Tabbar_Profile_Icon" width="38" height="39"/>
+        <namedColor name="ChatHeader_TimeLabelFont_Color">
+            <color red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

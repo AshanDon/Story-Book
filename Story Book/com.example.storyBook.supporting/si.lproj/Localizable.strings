@@ -1,0 +1,121 @@
+/* 
+  Localizable.strings
+  Story Book
+
+  Created by Ashan Anuruddika on 6/21/20.
+  Copyright © 2020 Ashan. All rights reserved.
+*/
+
+//Mark :- SIGNIN page Sinhala localization identification and values.
+"SOCIAL_MEDIA_TITLE" = "අපව අනුගමනය කරන්න";
+"USER_NAME_OR_EMAIL" = "විද්‍යුත් තැපෑල";
+"PASSWORD" = "මුරපදය";
+"SIGNINBUTTON" = "පිවිසී​ම";
+"SIGNUPBUTTON" = "ලියාපදිංචි​ය";
+"ORLABEL" = "හෝ";
+
+"EMPTY_USERNAME_TEXT_FIELD" = "කරුණාකර පරිශීලක නමක් හෝ විද්‍යුත් ලිපියක් ඇතුළත් කරන්න.";
+"EMPTY_PASSWORD_TEXT_FIELD" = "කරුණාකර මුරපදයක් ඇතුළත් කරන්න.";
+
+//Mark :- SIGNUP PAGE Sinhala localization identification and values.
+"TITLE_OF_SIGNUP_PAGE" = "ලියාපදිංචි​ය";
+"FIRST_NAME" = "  මුල් නම";
+"LAST_NAME" = "  අවසන් නම";
+"EMAIL" = "  විද්යුත් තැපෑල";
+"DATE_OF_BIRTH" = "  උපන්දිනය";
+"COUNTRY" = "  උපන් රට";
+"PASSWORD" = "  මුරපදය";
+"RETYPE_PASSWORD" = "  මුරපදය නැවත";
+"SIGNUP_BUTTON" = "  ලියාපදිංචි වන්න";
+
+"EMPTY_FIRSTNAME_FIELD" = "ඔබේ මුල් නම අවශ්‍යයි.";
+"EMPTY_LASTNAME_FIELD" = "ඔබගේ අවසාන නම අවශ්‍යයි.";
+"EMPTY_EMAIL_FIELD" = "ඔබගේ වලංගු විද්‍යුත් තැපෑල අවශ්‍ය වේ.";
+"EMPTY_BIRTHDAY_FIELD" = "ඔබගේ උපන් දිනය අවශ්‍ය වේ.";
+"EMPTY_COUNTRY_FIELD" = "ඔබේ රට අවශ්‍යයි.";
+"EMPTY_PASSWORD_FIELD" = "කරුණාකර වලංගු මුරපදයක් ඇතුළත් කරන්න.";
+"EMPTY_RETYPEPASSWORD_FIELD" = "කරුණාකර මුරපදයක් නැවත ඇතුළත් කරන්න.";
+
+
+//MARK :- Capture View Sinhala localization identification and values.
+"TITLE_PHOTO" = "ඡායාරූප";
+"TITLE_VIDEO" = "වීඩියෝ";
+
+//MARK :- New Post View Sinhala localization identification and values.
+"NEWPOST_TITLE" = "නව සටහන";
+"WRITE_A_CAPTION" = "පෝස්ට් එකේ කතාවක් ලියන්න";
+"TAG_PEOPLE" = "මිතුරන් එකතු කරන්න";
+"ADD_LOCATION" = "ස්ථානය එක් කරන්න";
+
+//Mark :- Add to Story View sinhala localization identification and values.
+"ADD_STORY" = "මතකයන් එකතු කරන්න";
+
+//MARK :- Home View Sinhala localization identification and values.
+"HOME_TITLE" = "මුල් පිටුව";
+
+//MARK :- Media View Sinhala localization identification and values.
+"MEDIA_TITLE" = "ප්‍රකාශන මාධ්‍ය";
+
+//MARK :- Notification View Sinhala localization identification and values.
+"NOTIFICATION_TITLE" = "දැනුම්දීම";
+
+//MARK :- ChatList View Sinhala localization identification and values.
+"CHATLIST_TITLE" = "කතාබස් ලැයිස්තුව";
+"CHATLIST_SEARCH" = "සෙවීම";
+
+//Mark :- Location English localization identification and values.
+"LOCATION" = "ස්ථානය";
+
+
+//Mark :- Alert Action Sinhala localization identification and values.
+"OK_ALERT" = "හරි";
+"WARNING" = "අවවාදයයි.";
+"CANCEL_BUTTON" = "අවලංගු කරන්න";
+"NEXT_BUTTON" = "ඊලඟ";
+"BACK_BUTTON" = "ආපසු";
+"SHARE_BUTTON" = "පළ කරන්න";
+"LIBRARY_OPTION" = "ඡායාරූප තෝරන්න";
+"TAKEPHOTO_OPTION" = "ඡායාරූපය ගන්න";
+"CANCEL_UPLOAD" = "අවලංගු කරන්න";
+
+//Mark :- Bar Button Sinhala localization identification and values.
+
+"DONE_BARBUTTON_ITEM" = "ඉවරයි";
+
+"CANCEL_BARBUTTON_ITEM" = "අවලංගු කරන්න";
+
+
+//Mark :- Profile View Sinhala localization identification and values.
+"POST_LABEL" = "පළ කිරිම්";
+"FOLLOWER_LABEL" = "අනුගාමිකයන්";
+"FOLLOWING_LABEL" = "අනුගමනය";
+
+
+//Mark :- Notification localization identification and values.
+
+"PASSWORD_NOT_MATCH" = "ඔබගේ මුරපදය නොගැලපේ.";
+
+"SIGNIN_ERROR_TITLE" = "පිවිසී​මේ දෝෂයකි";
+"SIGNIN_ERROR_MESSAGE" = "පිවිසී​මේ ගැටලුවක් විය.";
+
+"SIGNIN_INVALID_EMAIL" = "අවලංගු විද්යුත් ලිපිනකි";
+"SIGNIN_INVALIDEMAIL_MESSAGE" = "කරුණාකර වලංගු විද්‍යුත් තැපෑලක් හෝ පරිශීලක නාමයක් ඇතුළත් කරන්න.";
+
+"SIGNIN_WRONG_PASSWORD" = "වැරදි මුරපදයකි";
+"SIGNIN_WRONGPASSWORD_MESSAGE" = "ඔබ ඇතුළත් කළ මුරපදය වැරදිය.";
+
+"SIGNUP_ERROR_TITLE" = "ලියාපදිංචි වීමේ දෝෂයකි";
+"SIGNUP_ERROR_MESSAGE" = "ලියාපදිංචි වීමේ දෝෂයකි";
+
+"SIGNUP_ALREADY_EMAIL" = "විද්‍යුත් තැපෑල දැනටමත් පරිශීලකයා තුළ ඇත";
+"SIGNUP_ALREADYEMAIL_MESSAGE" = "කරුණාකර වෙනත් විද්‍යුත් තැපෑලක් ලබා දෙන්න.";
+
+"SIGNUP_WEAK_PASSWORD" = "දුර්වල මුරපදයකී";
+"SIGNUP_WEAKPASSWORD_MESSAGE" = "මුරපදය අවම වශයෙන් අක්ෂර 6 ක් විය යුතුය";
+
+"CHANGE_PROFILE_TITLE" = "ඔබගේ ඡායාරූපය වෙනස් කරන්න";
+"CHANGE_PROFILE_MESSAGE" = "ඔබගේ ඡායාරූපය වෙනස් කිරීමට විකල්පයක් තෝරන්න.";
+
+"UPLOADED_ERROR_TITLE" = "පද්ධතිය​ දෝෂයකි";
+"UPLOADED_ERROR_MESSAGE" = "ඡායාරූපය පද්ධතිය​ට එක් කිරීමේ ගැටලුවක් විය.";
+ට

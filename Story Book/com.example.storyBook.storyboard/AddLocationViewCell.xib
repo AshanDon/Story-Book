@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ADDLOCATION" id="KGk-i7-Jjw" customClass="AddLocationViewCell" customModule="Story_Book" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IbC-aB-cGK">
+                        <rect key="frame" x="12" y="10" width="390" height="39"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOZ-EU-QuJ">
+                                <rect key="frame" x="12" y="11" width="108.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <color key="textColor" name="SignUp_TextFieldFont_Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Right_Arrow_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="PX7-Eq-ROj">
+                                <rect key="frame" x="361" y="11" width="17" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="17" id="kyZ-nq-UdF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="Tabbar_Background_Color"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PX7-Eq-ROj" secondAttribute="trailing" constant="12" id="I9j-fb-j6w"/>
+                            <constraint firstItem="PX7-Eq-ROj" firstAttribute="centerY" secondItem="IbC-aB-cGK" secondAttribute="centerY" id="UAE-tK-R33"/>
+                            <constraint firstItem="PX7-Eq-ROj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QOZ-EU-QuJ" secondAttribute="trailing" constant="8" id="WSN-vV-dAH"/>
+                            <constraint firstAttribute="bottom" secondItem="PX7-Eq-ROj" secondAttribute="bottom" constant="1" id="Z0u-qS-vfC"/>
+                            <constraint firstItem="QOZ-EU-QuJ" firstAttribute="top" secondItem="PX7-Eq-ROj" secondAttribute="top" id="qnJ-ig-EbG"/>
+                            <constraint firstItem="QOZ-EU-QuJ" firstAttribute="centerY" secondItem="IbC-aB-cGK" secondAttribute="centerY" id="s4U-59-SgP"/>
+                            <constraint firstItem="PX7-Eq-ROj" firstAttribute="top" secondItem="IbC-aB-cGK" secondAttribute="top" constant="11" id="v7Y-gd-jZ3"/>
+                            <constraint firstItem="QOZ-EU-QuJ" firstAttribute="leading" secondItem="IbC-aB-cGK" secondAttribute="leading" constant="12" id="ykC-Jy-iqJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Z0u-qS-vfC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="IbC-aB-cGK" secondAttribute="bottom" constant="2" id="Ofy-2V-V7Z"/>
+                    <constraint firstAttribute="trailing" secondItem="IbC-aB-cGK" secondAttribute="trailing" constant="12" id="a4M-Ob-n5Y"/>
+                    <constraint firstItem="IbC-aB-cGK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="oUs-AD-cwe"/>
+                    <constraint firstItem="IbC-aB-cGK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="rPd-OO-kAg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="Tabbar_Background_Color"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addLocationBakground" destination="IbC-aB-cGK" id="Rau-Py-amU"/>
+                <outlet property="addLocationLabel" destination="QOZ-EU-QuJ" id="t1I-7t-fdA"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="154"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Right_Arrow_Icon" width="9" height="17"/>
+        <namedColor name="SignUp_TextFieldFont_Color">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tabbar_Background_Color">
+            <color red="0.96100002527236938" green="0.65100002288818359" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

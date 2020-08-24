@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="FriendPostCollectionViewCell" customModule="Story_Book" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="367"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="353" height="367"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rks-UH-K2a">
+                        <rect key="frame" x="0.0" y="0.0" width="353" height="367"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tabbar_Profile_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="vRO-gC-rzf">
+                                <rect key="frame" x="15" y="12" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="8OR-Vo-4HU"/>
+                                    <constraint firstAttribute="width" secondItem="vRO-gC-rzf" secondAttribute="height" id="IBp-gz-2bM"/>
+                                    <constraint firstAttribute="height" constant="36" id="z37-8N-Pf5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Virendra Sana" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW7-rx-riq">
+                                <rect key="frame" x="56" y="12" width="148" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="HGp-OI-de2"/>
+                                    <constraint firstAttribute="height" constant="18" id="hUb-y3-TcW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
+                                <color key="textColor" name="FriendPost_ProfileNameFont_Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Califonia, USA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sN-eb-auf">
+                                <rect key="frame" x="56" y="35" width="148" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="TMQ-Vz-WS8"/>
+                                    <constraint firstAttribute="height" constant="13" id="c2R-gI-ZnM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="11"/>
+                                <color key="textColor" name="FriendPost_LocationFont_Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryBook" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-ul-jd5">
+                                <rect key="frame" x="0.0" y="60" width="353" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="353" id="T3r-l0-Fr3"/>
+                                    <constraint firstAttribute="width" secondItem="ajk-ul-jd5" secondAttribute="height" multiplier="353:200" id="c2y-pk-h5W"/>
+                                    <constraint firstAttribute="height" constant="200" id="l2w-ZE-XGh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nnp-FC-atR">
+                                <rect key="frame" x="15" y="272" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="W1A-v2-1Qb"/>
+                                    <constraint firstAttribute="width" secondItem="Nnp-FC-atR" secondAttribute="height" id="aem-e7-uGT"/>
+                                    <constraint firstAttribute="height" constant="25" id="aoV-xg-rOD"/>
+                                </constraints>
+                                <state key="normal" image="Like_Icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIh-vs-Kns">
+                                <rect key="frame" x="45" y="272" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vIh-vs-Kns" secondAttribute="height" id="Fhj-Js-kxP"/>
+                                    <constraint firstAttribute="height" constant="25" id="bzS-b7-uDj"/>
+                                    <constraint firstAttribute="width" constant="25" id="jJj-nB-aIR"/>
+                                </constraints>
+                                <state key="normal" image="Comment_Icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhC-WP-WXY">
+                                <rect key="frame" x="75" y="272" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Lvi-6b-wKR"/>
+                                    <constraint firstAttribute="height" constant="25" id="Z6e-Bt-x8N"/>
+                                    <constraint firstAttribute="width" secondItem="MhC-WP-WXY" secondAttribute="height" id="xEi-Se-5kg"/>
+                                </constraints>
+                                <state key="normal" image="Share_Icon"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+120 Liked" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awe-Fy-tF6">
+                                <rect key="frame" x="271" y="278" width="66" height="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" name="FriendPost_Like&amp;CommentLabelFont_Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tabbar_Profile_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="kER-FM-j76">
+                                <rect key="frame" x="242" y="272" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kER-FM-j76" secondAttribute="height" id="ADf-6o-FqA"/>
+                                    <constraint firstAttribute="height" constant="25" id="fVL-d2-Ivm"/>
+                                    <constraint firstAttribute="width" constant="25" id="kOD-bd-OBL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tabbar_Profile_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="MGu-sq-Ysi">
+                                <rect key="frame" x="222" y="272" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="35z-dW-qqt"/>
+                                    <constraint firstAttribute="width" secondItem="MGu-sq-Ysi" secondAttribute="height" id="ElZ-u4-7hv"/>
+                                    <constraint firstAttribute="height" constant="25" id="i9K-rv-QbV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tabbar_Profile_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fUt-8r-j1Q">
+                                <rect key="frame" x="202" y="272" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="7HG-Ik-wZr"/>
+                                    <constraint firstAttribute="width" secondItem="fUt-8r-j1Q" secondAttribute="height" id="Qwn-HR-OmM"/>
+                                    <constraint firstAttribute="height" constant="25" id="iVC-0x-7ct"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Add Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0vG-G9-eVU">
+                                <rect key="frame" x="45" y="328" width="292" height="25"/>
+                                <color key="backgroundColor" name="FriendPost_CommentFieldBackground_Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="OED-6v-RRs"/>
+                                </constraints>
+                                <color key="textColor" name="FriendPost_CommentFieldFont_Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OED-6v-RRs"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tabbar_Profile_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="1M9-RZ-cqE">
+                                <rect key="frame" x="15" y="328" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ESD-aK-HZz"/>
+                                    <constraint firstAttribute="width" secondItem="1M9-RZ-cqE" secondAttribute="height" id="VeC-Ai-Nk0"/>
+                                    <constraint firstAttribute="width" constant="25" id="zNk-hI-zR6"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iID-LK-5gs">
+                                <rect key="frame" x="15" y="305" width="116" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="UqB-zM-AKN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                <state key="normal" title="View All Comment">
+                                    <color key="titleColor" name="FriendPost_Like&amp;CommentLabelFont_Color"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F56-eq-D4u">
+                                <rect key="frame" x="318" y="20" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="18a-eU-Obx"/>
+                                    <constraint firstAttribute="width" secondItem="F56-eq-D4u" secondAttribute="height" multiplier="1:1" id="4Oa-ff-sLc"/>
+                                    <constraint firstAttribute="height" constant="20" id="vEB-QR-h4R"/>
+                                </constraints>
+                                <state key="normal" image="PostSettings_Icon"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="FriendPost_Background_Color"/>
+                        <constraints>
+                            <constraint firstItem="iID-LK-5gs" firstAttribute="top" secondItem="Nnp-FC-atR" secondAttribute="bottom" constant="8" id="3mw-oc-3M1"/>
+                            <constraint firstItem="2sN-eb-auf" firstAttribute="top" secondItem="rks-UH-K2a" secondAttribute="top" constant="35" id="3xu-k8-eqd"/>
+                            <constraint firstItem="2sN-eb-auf" firstAttribute="leading" secondItem="vRO-gC-rzf" secondAttribute="trailing" constant="5" id="4YN-AD-IkX"/>
+                            <constraint firstItem="2sN-eb-auf" firstAttribute="bottom" secondItem="vRO-gC-rzf" secondAttribute="bottom" id="6Bi-O0-KIT"/>
+                            <constraint firstItem="awe-Fy-tF6" firstAttribute="leading" secondItem="kER-FM-j76" secondAttribute="trailing" constant="4" id="702-py-Zgc"/>
+                            <constraint firstItem="vIh-vs-Kns" firstAttribute="top" secondItem="ajk-ul-jd5" secondAttribute="bottom" constant="12" id="7SQ-g7-dhj"/>
+                            <constraint firstItem="vIh-vs-Kns" firstAttribute="centerY" secondItem="Nnp-FC-atR" secondAttribute="centerY" id="Fn8-0w-eb2"/>
+                            <constraint firstItem="awe-Fy-tF6" firstAttribute="leading" secondItem="fUt-8r-j1Q" secondAttribute="trailing" constant="44" id="Gn3-9L-gL7"/>
+                            <constraint firstItem="vRO-gC-rzf" firstAttribute="leading" secondItem="rks-UH-K2a" secondAttribute="leading" constant="15" id="Hw9-Pn-Y6m"/>
+                            <constraint firstItem="ajk-ul-jd5" firstAttribute="top" secondItem="vRO-gC-rzf" secondAttribute="bottom" constant="12" id="IZK-Jb-cRc"/>
+                            <constraint firstAttribute="trailing" secondItem="awe-Fy-tF6" secondAttribute="trailing" constant="16" id="LKX-yR-Kwk"/>
+                            <constraint firstItem="ajk-ul-jd5" firstAttribute="leading" secondItem="rks-UH-K2a" secondAttribute="leading" id="Ls7-Tt-50h"/>
+                            <constraint firstAttribute="bottom" secondItem="1M9-RZ-cqE" secondAttribute="bottom" constant="14" id="OPD-KO-2M9"/>
+                            <constraint firstItem="MhC-WP-WXY" firstAttribute="top" secondItem="ajk-ul-jd5" secondAttribute="bottom" constant="12" id="OVS-gm-nEv"/>
+                            <constraint firstItem="MhC-WP-WXY" firstAttribute="leading" secondItem="vIh-vs-Kns" secondAttribute="trailing" constant="5" id="Rqn-BW-LZs"/>
+                            <constraint firstAttribute="trailing" secondItem="ajk-ul-jd5" secondAttribute="trailing" id="aaX-AT-Ikf"/>
+                            <constraint firstItem="fUt-8r-j1Q" firstAttribute="top" secondItem="ajk-ul-jd5" secondAttribute="bottom" constant="12" id="cOf-rt-WRo"/>
+                            <constraint firstItem="0vG-G9-eVU" firstAttribute="trailing" secondItem="awe-Fy-tF6" secondAttribute="trailing" id="dRi-eH-IXC"/>
+                            <constraint firstItem="iID-LK-5gs" firstAttribute="leading" secondItem="rks-UH-K2a" secondAttribute="leading" constant="15" id="dbm-iY-zJN"/>
+                            <constraint firstItem="0vG-G9-eVU" firstAttribute="leading" secondItem="1M9-RZ-cqE" secondAttribute="trailing" constant="5" id="e9r-oR-HbG"/>
+                            <constraint firstItem="MGu-sq-Ysi" firstAttribute="top" secondItem="ajk-ul-jd5" secondAttribute="bottom" constant="12" id="eda-Qc-jgR"/>
+                            <constraint firstItem="Nnp-FC-atR" firstAttribute="top" secondItem="ajk-ul-jd5" secondAttribute="bottom" constant="12" id="gFu-cf-ajb"/>
+                            <constraint firstItem="1M9-RZ-cqE" firstAttribute="leading" secondItem="rks-UH-K2a" secondAttribute="leading" constant="15" id="gd0-Lz-gEZ"/>
+                            <constraint firstItem="vIh-vs-Kns" firstAttribute="leading" secondItem="Nnp-FC-atR" secondAttribute="trailing" constant="5" id="gt7-6z-mFr"/>
+                            <constraint firstItem="vRO-gC-rzf" firstAttribute="top" secondItem="rks-UH-K2a" secondAttribute="top" constant="12" id="hcX-As-CJi"/>
+                            <constraint firstItem="0vG-G9-eVU" firstAttribute="height" secondItem="1M9-RZ-cqE" secondAttribute="height" id="izm-0Q-NLy"/>
+                            <constraint firstItem="ajk-ul-jd5" firstAttribute="top" secondItem="F56-eq-D4u" secondAttribute="bottom" constant="20" id="kf6-2W-dtv"/>
+                            <constraint firstItem="kER-FM-j76" firstAttribute="top" secondItem="ajk-ul-jd5" secondAttribute="bottom" constant="12" id="l1X-0N-tXV"/>
+                            <constraint firstItem="Nnp-FC-atR" firstAttribute="leading" secondItem="rks-UH-K2a" secondAttribute="leading" constant="15" id="mLN-O0-8BW"/>
+                            <constraint firstItem="0vG-G9-eVU" firstAttribute="top" secondItem="iID-LK-5gs" secondAttribute="bottom" constant="8" id="n84-LO-M5R"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iID-LK-5gs" secondAttribute="trailing" constant="220" id="pf2-Cq-ryj"/>
+                            <constraint firstAttribute="trailing" secondItem="F56-eq-D4u" secondAttribute="trailing" constant="15" id="poV-XV-9VV"/>
+                            <constraint firstItem="awe-Fy-tF6" firstAttribute="top" secondItem="ajk-ul-jd5" secondAttribute="bottom" constant="18" id="pth-9H-VzL"/>
+                            <constraint firstItem="awe-Fy-tF6" firstAttribute="leading" secondItem="MGu-sq-Ysi" secondAttribute="trailing" constant="24" id="qo7-bK-YYu"/>
+                            <constraint firstItem="pW7-rx-riq" firstAttribute="leading" secondItem="vRO-gC-rzf" secondAttribute="trailing" constant="5" id="u07-xr-7ji"/>
+                            <constraint firstItem="pW7-rx-riq" firstAttribute="top" secondItem="rks-UH-K2a" secondAttribute="top" constant="12" id="veS-uR-PEO"/>
+                            <constraint firstItem="F56-eq-D4u" firstAttribute="top" secondItem="rks-UH-K2a" secondAttribute="top" constant="20" id="w0B-QS-N64"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rks-UH-K2a" secondAttribute="trailing" id="H5Q-Mi-EDr"/>
+                <constraint firstAttribute="bottom" secondItem="rks-UH-K2a" secondAttribute="bottom" id="XJc-9M-unw"/>
+                <constraint firstItem="rks-UH-K2a" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cQu-Nh-PSg"/>
+                <constraint firstItem="rks-UH-K2a" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fkx-KN-hiL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="125" height="163"/>
+            <connections>
+                <outlet property="addCommentTextField" destination="0vG-G9-eVU" id="3ab-gV-8zS"/>
+                <outlet property="friendPostBackgroundView" destination="rks-UH-K2a" id="Ft8-DV-2ma"/>
+                <outlet property="postImage" destination="ajk-ul-jd5" id="HDT-gw-Ry2"/>
+            </connections>
+            <point key="canvasLocation" x="192.0289855072464" y="188.50446428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Comment_Icon" width="25" height="25"/>
+        <image name="Like_Icon" width="25" height="25"/>
+        <image name="PostSettings_Icon" width="12" height="4"/>
+        <image name="Share_Icon" width="25" height="25"/>
+        <image name="StoryBook" width="123" height="124"/>
+        <image name="Tabbar_Profile_Icon" width="38" height="39"/>
+        <namedColor name="FriendPost_Background_Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FriendPost_CommentFieldBackground_Color">
+            <color red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FriendPost_CommentFieldFont_Color">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FriendPost_Like&amp;CommentLabelFont_Color">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FriendPost_LocationFont_Color">
+            <color red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FriendPost_ProfileNameFont_Color">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

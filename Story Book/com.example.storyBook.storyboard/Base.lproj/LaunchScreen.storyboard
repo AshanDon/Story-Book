@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gf-Xg-ccU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryBook" translatesAutoresizingMaskIntoConstraints="NO" id="ESP-cW-up1">
+                                        <rect key="frame" x="145.66666666666666" y="306" width="122.99999999999997" height="124"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="754" text="Life is a Story Book." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDV-AI-rea">
+                                        <rect key="frame" x="54.666666666666657" y="676" width="305" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="ojP-4j-saX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="21"/>
+                                        <color key="textColor" name="Main_Font_Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Main_Background_Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MDV-AI-rea" secondAttribute="trailing" constant="54.5" id="7Td-bH-Asm"/>
+                                    <constraint firstItem="MDV-AI-rea" firstAttribute="centerX" secondItem="3gf-Xg-ccU" secondAttribute="centerX" id="Qw3-44-7P8"/>
+                                    <constraint firstAttribute="bottom" secondItem="MDV-AI-rea" secondAttribute="bottom" constant="36" id="dUP-Xd-r3d"/>
+                                    <constraint firstItem="ESP-cW-up1" firstAttribute="centerX" secondItem="3gf-Xg-ccU" secondAttribute="centerX" id="r9v-RC-au9"/>
+                                    <constraint firstItem="MDV-AI-rea" firstAttribute="leading" secondItem="3gf-Xg-ccU" secondAttribute="leading" constant="54.5" id="uK4-py-ifK"/>
+                                    <constraint firstItem="ESP-cW-up1" firstAttribute="centerY" secondItem="3gf-Xg-ccU" secondAttribute="centerY" id="yAP-kw-nge"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="Main_Background_Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3gf-Xg-ccU" secondAttribute="trailing" id="3Iq-gy-nx1"/>
+                            <constraint firstItem="3gf-Xg-ccU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3wZ-3c-MwL"/>
+                            <constraint firstItem="3gf-Xg-ccU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EWf-oP-Tst"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3gf-Xg-ccU" secondAttribute="bottom" id="GaS-LZ-XK1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="373.76311844077964"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="StoryBook" width="123" height="124"/>
+        <namedColor name="Main_Background_Color">
+            <color red="0.98000001907348633" green="0.3919999897480011" blue="0.090000003576278687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Main_Font_Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

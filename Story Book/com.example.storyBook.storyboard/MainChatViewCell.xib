@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainChatCell" id="KGk-i7-Jjw" customClass="MainChatViewCell" customModule="Story_Book" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xh-N9-df8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tabbar_Profile_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="nya-Lp-fPA">
+                                <rect key="frame" x="10" y="2" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="1lV-Wf-Dge"/>
+                                    <constraint firstAttribute="height" constant="48" id="Svh-c8-CRv"/>
+                                    <constraint firstAttribute="width" secondItem="nya-Lp-fPA" secondAttribute="height" multiplier="1:1" id="fPf-UU-Aqy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anje Keizer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVM-NE-anj">
+                                <rect key="frame" x="64" y="8" width="267.5" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="254" id="3GL-3Q-QHV"/>
+                                    <constraint firstAttribute="height" constant="20" id="SUC-2E-3cl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am fine thank you so much dear😃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzX-6b-9h3">
+                                <rect key="frame" x="64" y="28" width="267.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uzd-5f-oKL" userLabel="Separetar">
+                                <rect key="frame" x="10" y="52" width="394" height="1"/>
+                                <color key="backgroundColor" name="Separeter_Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="TCH-aL-rUx"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTc-yb-l4d">
+                                <rect key="frame" x="378" y="21" width="26" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="05R-sj-HxY"/>
+                                    <constraint firstAttribute="height" constant="10" id="rbN-Vm-1eD"/>
+                                    <constraint firstAttribute="width" secondItem="bTc-yb-l4d" secondAttribute="height" multiplier="13:5" id="xmy-lD-tpl"/>
+                                </constraints>
+                                <state key="normal" image="ChatList_ChatSettings_Icon"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DzX-6b-9h3" secondAttribute="bottom" constant="5" id="0gf-ez-mdl"/>
+                            <constraint firstItem="Uzd-5f-oKL" firstAttribute="leading" secondItem="5xh-N9-df8" secondAttribute="leading" constant="10" id="8zh-5R-kVY"/>
+                            <constraint firstItem="Uzd-5f-oKL" firstAttribute="top" secondItem="bTc-yb-l4d" secondAttribute="bottom" constant="21" id="9Sj-j5-Q3B"/>
+                            <constraint firstAttribute="bottom" secondItem="Uzd-5f-oKL" secondAttribute="bottom" id="AfK-o7-dmw"/>
+                            <constraint firstItem="yVM-NE-anj" firstAttribute="leading" secondItem="nya-Lp-fPA" secondAttribute="trailing" constant="6" id="Ija-Go-ODY"/>
+                            <constraint firstItem="bTc-yb-l4d" firstAttribute="top" secondItem="5xh-N9-df8" secondAttribute="top" constant="21" id="MtC-Vp-lPH"/>
+                            <constraint firstAttribute="trailing" secondItem="bTc-yb-l4d" secondAttribute="trailing" constant="10" id="VUN-yl-Vi4"/>
+                            <constraint firstItem="nya-Lp-fPA" firstAttribute="leading" secondItem="5xh-N9-df8" secondAttribute="leading" constant="10" id="Yn1-HN-PLx"/>
+                            <constraint firstItem="DzX-6b-9h3" firstAttribute="leading" secondItem="yVM-NE-anj" secondAttribute="leading" id="a5N-o7-ZA6"/>
+                            <constraint firstItem="DzX-6b-9h3" firstAttribute="trailing" secondItem="yVM-NE-anj" secondAttribute="trailing" id="ajd-iK-kte"/>
+                            <constraint firstItem="DzX-6b-9h3" firstAttribute="width" secondItem="yVM-NE-anj" secondAttribute="width" id="bjL-r8-z0T"/>
+                            <constraint firstAttribute="trailing" secondItem="Uzd-5f-oKL" secondAttribute="trailing" constant="10" id="eaO-1M-JKq"/>
+                            <constraint firstItem="yVM-NE-anj" firstAttribute="top" secondItem="5xh-N9-df8" secondAttribute="top" constant="8" id="fxA-2i-8gO"/>
+                            <constraint firstItem="nya-Lp-fPA" firstAttribute="top" secondItem="5xh-N9-df8" secondAttribute="top" constant="2" id="gEm-PE-XsA"/>
+                            <constraint firstItem="DzX-6b-9h3" firstAttribute="height" secondItem="yVM-NE-anj" secondAttribute="height" id="hSu-Ta-cvn"/>
+                            <constraint firstItem="DzX-6b-9h3" firstAttribute="leading" secondItem="nya-Lp-fPA" secondAttribute="trailing" constant="6" id="qtF-LD-8zd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5xh-N9-df8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3Ld-oJ-dx7"/>
+                    <constraint firstItem="5xh-N9-df8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="506-NU-POt"/>
+                    <constraint firstAttribute="trailing" secondItem="5xh-N9-df8" secondAttribute="trailing" id="9eN-VJ-04m"/>
+                    <constraint firstAttribute="bottom" secondItem="5xh-N9-df8" secondAttribute="bottom" id="kN2-l3-xQG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="profileImageView" destination="nya-Lp-fPA" id="74G-T1-Rxm"/>
+                <outlet property="profileNameLabel" destination="yVM-NE-anj" id="TBy-gI-Vsp"/>
+            </connections>
+            <point key="canvasLocation" x="92.753623188405811" y="-10.379464285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ChatList_ChatSettings_Icon" width="28" height="12"/>
+        <image name="Tabbar_Profile_Icon" width="38" height="39"/>
+        <namedColor name="Separeter_Color">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
