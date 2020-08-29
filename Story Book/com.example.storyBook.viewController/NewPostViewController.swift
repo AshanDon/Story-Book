@@ -44,7 +44,26 @@ class NewPostViewController: UIViewController {
     
     private var storageUploadTask : StorageUploadTask?
     
-    private let tagPepoleList = [String]()
+    private var tagPepoleList = [String]()
+    
+    //Created a TouchView
+    lazy var touchView : UIView = {
+        
+        let _touchView = UIView()
+        
+        _touchView.backgroundColor = UIColor(displayP3Red: 0.1, green: 0.1, blue: 0.1, alpha: 0)
+        
+        _touchView.isUserInteractionEnabled = true
+        
+        _touchView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        
+        _touchView.addGestureRecognizer(tapGestureRecognizer)
+        
+        return _touchView
+        
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,10 +109,46 @@ class NewPostViewController: UIViewController {
             
         }
         
+        tagPepoleList.append("Dasun")
+        tagPepoleList.append("Terance")
+        
+        postTextView.delegate = self
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Register from keyboard notification
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShow(notification :)), name: UIWindow.keyboardDidShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasHidden), name: UIWindow.keyboardDidHideNotification, object: nil)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        //Remove from keyboard notification
+        NotificationCenter.default.removeObserver(self, name: UIWindow.keyboardDidShowNotification, object: nil)
+        
+        NotificationCenter.default.removeObserver(self, name: UIWindow.keyboardDidHideNotification, object: nil)
+    }
+
+    @objc private func keyboardWasShow(notification : Notification) {
+        
+        self.view.addSubview(touchView)
+        
+    }
+    
+    @objc private func keyboardWasHidden(){
+    
+        self.touchView.removeFromSuperview()
+        
     }
     
     private func setLanguageLocalization(){
-        
+
         backButton.setTitle(LanguageLocalization.shared.genaretedLanguageLocalization(languageResouce: localizResoce!, identification: "BACK_BUTTON"), for: .normal)
         
         titleLabel.text = LanguageLocalization.shared.genaretedLanguageLocalization(languageResouce: localizResoce!, identification: "NEWPOST_TITLE")
@@ -125,11 +180,20 @@ class NewPostViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func shareButtonDidTouch() {
+        
+        uploadNewPost()
+        
+    }
+    
+    
+    
     private func uploadNewPost(){
-        print("ok ok ok ")
+        
         guard let captureImageData = capturedImage else { return }
         
-        guard let caption = postTextView.text else { return }
+        guard var caption = postTextView.text else { return }
         
         if let user = Auth.auth().currentUser {
             
@@ -177,16 +241,27 @@ class NewPostViewController: UIViewController {
                         
                         if let url = url,error == nil {
                             
-                            //ProfileModel.collection.child(user.uid).updateChildValues(["profile_Image" : url.absoluteString])
                             let locationCellIndexPath = IndexPath(item: 0, section: 1)
                             
                             if let cell = strongeSelf.mainTableView.cellForRow(at: locationCellIndexPath) as? AddLocationViewCell {
-                            
-                                if cell.addLocationLabel.text != "", let locationName = cell.addLocationLabel.text {
-                                    print("location \(locationName)")
-                                    Post.newPost(userId: user.uid, caption: caption, imageDownloadURL: url.absoluteString, location: locationName, tagPepole: strongeSelf.tagPepoleList)
+                                
+                                guard var locationName = cell.addLocationLabel.text else { return }
+                                
+                                if locationName.elementsEqual("ස්ථානය එක් කරන්න") || locationName.elementsEqual("Add Location") {
+                                    
+                                    locationName = ""
+                                    
                                 }
-                            
+                                
+                                if caption.elementsEqual("Write a caption...") || caption.elementsEqual("පෝස්ට් එකේ කතාවක් ලියන්න"){
+                                    
+                                    caption = ""
+                                    
+                                }
+                                
+                                Post.newPost(userId: user.uid, caption: caption, imageDownloadURL: url.absoluteString, location: locationName, tagPepole: strongeSelf.tagPepoleList)
+                                
+                                strongeSelf.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
                             }
                             
                         } else {
@@ -219,15 +294,14 @@ class NewPostViewController: UIViewController {
             })
             
         }
-            
-        
+    
     }
     
-    @IBAction func shareButtonDidTouch() {
-        
-        uploadNewPost()
-        
+    @objc private func dismissKeyboard(){
+        self.view.endEditing(true)
     }
+    
+    
 }
 
 extension NewPostViewController : UITableViewDelegate,UITableViewDataSource {
@@ -340,4 +414,33 @@ extension NewPostViewController : GMSAutocompleteViewControllerDelegate {
     
   }
 
+}
+
+extension NewPostViewController : UITextViewDelegate {
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        if textView.text.elementsEqual("Write a caption...") || textView.text.elementsEqual("පෝස්ට් එකේ කතාවක් ලියන්න"){
+            
+            postTextView.text = ""
+            
+            return false
+            
+        }
+        
+        return true
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        if(text == "\n") {
+            
+            textView.resignFirstResponder()
+            
+            return false
+            
+        }
+        
+        return true
+    }
+    
 }
