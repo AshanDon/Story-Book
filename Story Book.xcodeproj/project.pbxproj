@@ -82,6 +82,7 @@
 		631D96EF24E5A60F00C18461 /* StoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostViewController.swift; sourceTree = "<group>"; };
 		6328B7E324E411740023DFFB /* StoryProfileReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProfileReusableView.swift; sourceTree = "<group>"; };
 		63656D2024F2F262007E518C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		63C2D49C24FAEAF200EFD5C5 /* TagPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPeopleViewController.swift; sourceTree = "<group>"; };
 		822FD580ABBB460A998B3F6A /* Pods_Story_Book.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Story_Book.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E03266B24A1190900F2E909 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		8E1C7F1D248EC0B3008FA398 /* MediaMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaMainViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +196,7 @@
 				6328B7E324E411740023DFFB /* StoryProfileReusableView.swift */,
 				631D96ED24E58F7C00C18461 /* AddStoryViewController.swift */,
 				631D96EF24E5A60F00C18461 /* StoryPostViewController.swift */,
+				63C2D49C24FAEAF200EFD5C5 /* TagPeopleViewController.swift */,
 			);
 			path = com.example.storyBook.viewController;
 			sourceTree = "<group>";
@@ -428,6 +430,7 @@
 				631D96EE24E58F7C00C18461 /* AddStoryViewController.swift in Sources */,
 				8EC931E8249FC5B100FBA9B9 /* LanguageLocalization.swift in Sources */,
 				8E86AD5324CF2F5700C80CC8 /* ProfileModel.swift in Sources */,
+				63C2D49D24FAEAF200EFD5C5 /* TagPeopleViewController.swift in Sources */,
 				8E7C476024896AAD00A54086 /* LoginViewController.swift in Sources */,
 				8EFFECA0249185F600304024 /* MainChatViewCell.swift in Sources */,
 				8E71B02E24C741E600CDD7F7 /* CollectionLayout.swift in Sources */,
