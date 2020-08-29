@@ -350,6 +350,12 @@ extension NewPostViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         if indexPath.section == 0 {
+            
+            let tagPeopleVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TagPeopleList") as! TagPeopleViewController
+            
+            tagPeopleVC.localizationResouce = localizResoce
+            
+            present(tagPeopleVC, animated: true, completion: nil)
 
         } else {
             
