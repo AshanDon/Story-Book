@@ -82,6 +82,13 @@
 //Mark :- Location English localization identification and values.
 "LOCATION" = "Location";
 
+//Mark :- Tag People English localization identification and values.
+
+"TAG_PEOPLE" = "Tag People";
+
+"FRIEND_SEARCH_FIELD" = "Search for friends";
+
+
 
 //Mark :- Bar Button localization identification and values.
 
