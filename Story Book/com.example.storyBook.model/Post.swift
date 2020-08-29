@@ -40,10 +40,6 @@ class Post {
                                     ]
         
         Post.collection.updateChildValues(["\(key)" : post])
-        
-        let personalFeedRef = ProfileModel.profileFeeds
-        
-        personalFeedRef.child(userId).updateChildValues(["\(key)" : post])
                                      
     }
     
