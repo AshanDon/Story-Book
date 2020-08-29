@@ -66,6 +66,11 @@
 //Mark :- Location English localization identification and values.
 "LOCATION" = "ස්ථානය";
 
+//Mark :- Tag People English localization identification and values.
+"TAG_PEOPLE" = "මිතුරන් එකතු කිරීම";
+
+"FRIEND_SEARCH_FIELD" = "මිතුරන් සොයන්න";
+
 
 //Mark :- Alert Action Sinhala localization identification and values.
 "OK_ALERT" = "හරි";
