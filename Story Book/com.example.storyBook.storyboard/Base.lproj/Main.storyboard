@@ -1373,7 +1373,7 @@
         <!--Tag People-->
         <scene sceneID="Ac4-Nb-7rb">
             <objects>
-                <viewController storyboardIdentifier="TagPeopleList" title="Tag People" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wue-aG-4h9" customClass="TagPeopleViewController" customModule="Story_Book" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TagPeopleList" title="Tag People" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wue-aG-4h9" customClass="FindPeopleViewController" customModule="Story_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="66C-qF-oc9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
