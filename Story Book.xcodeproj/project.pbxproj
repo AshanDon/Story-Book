@@ -11,6 +11,7 @@
 		631D96F024E5A60F00C18461 /* StoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D96EF24E5A60F00C18461 /* StoryPostViewController.swift */; };
 		6328B7E524E411740023DFFB /* StoryProfileReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6328B7E324E411740023DFFB /* StoryProfileReusableView.swift */; };
 		63656D2124F2F262007E518C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63656D2024F2F262007E518C /* Post.swift */; };
+		636DD9AC24FBD54000311652 /* FindPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DD9AB24FBD54000311652 /* FindPeopleViewController.swift */; };
 		8E03266C24A1190900F2E909 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03266B24A1190900F2E909 /* Constant.swift */; };
 		8E1C7F1E248EC0B3008FA398 /* MediaMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C7F1D248EC0B3008FA398 /* MediaMainViewController.swift */; };
 		8E1C7F20248ECEA8008FA398 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C7F1F248ECEA8008FA398 /* NotificationViewController.swift */; };
@@ -82,7 +83,7 @@
 		631D96EF24E5A60F00C18461 /* StoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostViewController.swift; sourceTree = "<group>"; };
 		6328B7E324E411740023DFFB /* StoryProfileReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProfileReusableView.swift; sourceTree = "<group>"; };
 		63656D2024F2F262007E518C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		63C2D49C24FAEAF200EFD5C5 /* TagPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPeopleViewController.swift; sourceTree = "<group>"; };
+		636DD9AB24FBD54000311652 /* FindPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPeopleViewController.swift; sourceTree = "<group>"; };
 		822FD580ABBB460A998B3F6A /* Pods_Story_Book.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Story_Book.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E03266B24A1190900F2E909 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		8E1C7F1D248EC0B3008FA398 /* MediaMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaMainViewController.swift; sourceTree = "<group>"; };
@@ -196,7 +197,7 @@
 				6328B7E324E411740023DFFB /* StoryProfileReusableView.swift */,
 				631D96ED24E58F7C00C18461 /* AddStoryViewController.swift */,
 				631D96EF24E5A60F00C18461 /* StoryPostViewController.swift */,
-				63C2D49C24FAEAF200EFD5C5 /* TagPeopleViewController.swift */,
+				636DD9AB24FBD54000311652 /* FindPeopleViewController.swift */,
 			);
 			path = com.example.storyBook.viewController;
 			sourceTree = "<group>";
@@ -430,7 +431,6 @@
 				631D96EE24E58F7C00C18461 /* AddStoryViewController.swift in Sources */,
 				8EC931E8249FC5B100FBA9B9 /* LanguageLocalization.swift in Sources */,
 				8E86AD5324CF2F5700C80CC8 /* ProfileModel.swift in Sources */,
-				63C2D49D24FAEAF200EFD5C5 /* TagPeopleViewController.swift in Sources */,
 				8E7C476024896AAD00A54086 /* LoginViewController.swift in Sources */,
 				8EFFECA0249185F600304024 /* MainChatViewCell.swift in Sources */,
 				8E71B02E24C741E600CDD7F7 /* CollectionLayout.swift in Sources */,
@@ -450,6 +450,7 @@
 				8E74B38C249366CC00A2B4A4 /* ReceivingMessageViewCell.swift in Sources */,
 				8E1C7F1E248EC0B3008FA398 /* MediaMainViewController.swift in Sources */,
 				63656D2124F2F262007E518C /* Post.swift in Sources */,
+				636DD9AC24FBD54000311652 /* FindPeopleViewController.swift in Sources */,
 				8EBF22CB24B0AC8000B68549 /* AddLocationViewCell.swift in Sources */,
 				631D96F024E5A60F00C18461 /* StoryPostViewController.swift in Sources */,
 				8E5D55522492C5FC00269B12 /* ChatHeaderViewController.swift in Sources */,
