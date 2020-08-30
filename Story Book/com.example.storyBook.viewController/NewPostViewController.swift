@@ -351,10 +351,10 @@ extension NewPostViewController : UITableViewDelegate,UITableViewDataSource {
 
         if indexPath.section == 0 {
             
-            let tagPeopleVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TagPeopleList") as! TagPeopleViewController
-            
+            let tagPeopleVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TagPeopleList") as! FindPeopleViewController
+
             tagPeopleVC.localizationResouce = localizResoce
-            
+
             present(tagPeopleVC, animated: true, completion: nil)
 
         } else {
