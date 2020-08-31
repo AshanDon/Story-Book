@@ -16,6 +16,8 @@ class FindPeopleViewController: UIViewController {
     
     public var localizationResouce : String?
     
+    private var Created a list "nameList" and assigned values for testing. = ["Ashan Anuruddika","Dasun Maduwantha","Terance Wijesuriya"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,7 +50,20 @@ class FindPeopleViewController: UIViewController {
         }
         
         view.addSubview(navigationBar)
-
+        
+        personTableView.register(UINib(nibName: "FindPeopleCell", bundle: nil), forCellReuseIdentifier: "PeopleCell")
+        
+        personTableView.dataSource = self
+        
+        personTableView.delegate = self
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: "RELOAD_TAG_PEOPLE"), object: nil)
+        
     }
     
     @objc func cancelButtonPressed() {
@@ -63,4 +78,35 @@ class FindPeopleViewController: UIViewController {
         
     }
 
+}
+
+extension FindPeopleViewController : UITableViewDataSource,UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        return nameList.count
+
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let peopleCell = personTableView.dequeueReusableCell(withIdentifier: "PeopleCell", for: indexPath) as! FindPeopleCell
+        
+        peopleCell.profileName.text = nameList[indexPath.row]
+        
+        return peopleCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath) as! FindPeopleCell
+        
+        if let profileName = cell.profileName.text {
+            
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "RELOAD_TAG_PEOPLE"), object: profileName)
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+    }
 }
