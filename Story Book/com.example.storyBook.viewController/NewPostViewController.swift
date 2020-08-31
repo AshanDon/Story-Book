@@ -109,9 +109,6 @@ class NewPostViewController: UIViewController {
             
         }
         
-        tagPepoleList.append("Dasun")
-        tagPepoleList.append("Terance")
-        
         postTextView.delegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(realoadTagPeopleRow(_:)), name: Notification.Name("RELOAD_TAG_PEOPLE"), object: nil)
