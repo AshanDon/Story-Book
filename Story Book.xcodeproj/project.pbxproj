@@ -12,6 +12,8 @@
 		6328B7E524E411740023DFFB /* StoryProfileReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6328B7E324E411740023DFFB /* StoryProfileReusableView.swift */; };
 		63656D2124F2F262007E518C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63656D2024F2F262007E518C /* Post.swift */; };
 		636DD9AC24FBD54000311652 /* FindPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DD9AB24FBD54000311652 /* FindPeopleViewController.swift */; };
+		636DD9B424FBE18D00311652 /* FindPeopleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636DD9B324FBE18D00311652 /* FindPeopleCell.xib */; };
+		636DD9B624FBE39800311652 /* FindPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DD9B524FBE39800311652 /* FindPeopleCell.swift */; };
 		8E03266C24A1190900F2E909 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03266B24A1190900F2E909 /* Constant.swift */; };
 		8E1C7F1E248EC0B3008FA398 /* MediaMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C7F1D248EC0B3008FA398 /* MediaMainViewController.swift */; };
 		8E1C7F20248ECEA8008FA398 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C7F1F248ECEA8008FA398 /* NotificationViewController.swift */; };
@@ -84,6 +86,8 @@
 		6328B7E324E411740023DFFB /* StoryProfileReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProfileReusableView.swift; sourceTree = "<group>"; };
 		63656D2024F2F262007E518C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		636DD9AB24FBD54000311652 /* FindPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPeopleViewController.swift; sourceTree = "<group>"; };
+		636DD9B324FBE18D00311652 /* FindPeopleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindPeopleCell.xib; sourceTree = "<group>"; };
+		636DD9B524FBE39800311652 /* FindPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPeopleCell.swift; sourceTree = "<group>"; };
 		822FD580ABBB460A998B3F6A /* Pods_Story_Book.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Story_Book.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E03266B24A1190900F2E909 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		8E1C7F1D248EC0B3008FA398 /* MediaMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaMainViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 				631D96ED24E58F7C00C18461 /* AddStoryViewController.swift */,
 				631D96EF24E5A60F00C18461 /* StoryPostViewController.swift */,
 				636DD9AB24FBD54000311652 /* FindPeopleViewController.swift */,
+				636DD9B524FBE39800311652 /* FindPeopleCell.swift */,
 			);
 			path = com.example.storyBook.viewController;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				8ECDC37F249541DC00E58973 /* SenderMessageViewCell.xib */,
 				8E8D0BC124AFC1770010A7B0 /* TagPeopleTableViewCell.xib */,
 				8EBF22CA24B0AC8000B68549 /* AddLocationViewCell.xib */,
+				636DD9B324FBE18D00311652 /* FindPeopleCell.xib */,
 			);
 			path = com.example.storyBook.storyboard;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E7DC190248FFD4B00DEC14E /* FollowedNotificationViewCell.xib in Resources */,
+				636DD9B424FBE18D00311652 /* FindPeopleCell.xib in Resources */,
 				8EEE7DA5248829CD008D3A42 /* LaunchScreen.storyboard in Resources */,
 				8EEE7DA2248829CD008D3A42 /* Assets.xcassets in Resources */,
 				8EC931E1249FC49B00FBA9B9 /* Localizable.strings in Resources */,
@@ -449,6 +456,7 @@
 				8E5D72F924A94A8000BEFDDA /* CaptureViewController.swift in Sources */,
 				8E74B38C249366CC00A2B4A4 /* ReceivingMessageViewCell.swift in Sources */,
 				8E1C7F1E248EC0B3008FA398 /* MediaMainViewController.swift in Sources */,
+				636DD9B624FBE39800311652 /* FindPeopleCell.swift in Sources */,
 				63656D2124F2F262007E518C /* Post.swift in Sources */,
 				636DD9AC24FBD54000311652 /* FindPeopleViewController.swift in Sources */,
 				8EBF22CB24B0AC8000B68549 /* AddLocationViewCell.swift in Sources */,
