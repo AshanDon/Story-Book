@@ -114,6 +114,8 @@ class NewPostViewController: UIViewController {
         
         postTextView.delegate = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(realoadTagPeopleRow(_:)), name: Notification.Name("RELOAD_TAG_PEOPLE"), object: nil)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -180,6 +182,38 @@ class NewPostViewController: UIViewController {
         }
     }
     
+    @objc private func realoadTagPeopleRow(_ notification : Notification) {
+        
+        let details = notification.object as! String
+        
+        tagPepoleList.append(details)
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+
+        if let cell = mainTableView.cellForRow(at: indexPath) as? TagPeopleTableViewCell {
+            
+            var nameList : String?
+            
+            for tagNames in tagPepoleList {
+
+                if nameList == nil {
+                    
+                    nameList = tagNames
+                    
+                } else {
+                    
+                    nameList = "\(nameList!),\(tagNames)"
+                    
+                }
+
+            }
+            
+            cell.tagPeopleLable.text = nameList!
+    
+        }
+        
+    }
+    
     
     @IBAction func shareButtonDidTouch() {
         
@@ -237,7 +271,9 @@ class NewPostViewController: UIViewController {
                     
                 } else {
                     
-                    storageReference.downloadURL { (url, error) in
+                    storageReference.downloadURL { [weak self] (url, error) in
+                        
+                        guard let strongSelf = self else { return }
                         
                         if let url = url,error == nil {
                             
@@ -259,7 +295,7 @@ class NewPostViewController: UIViewController {
                                     
                                 }
                                 
-                                Post.newPost(userId: user.uid, caption: caption, imageDownloadURL: url.absoluteString, location: locationName, tagPepole: strongeSelf.tagPepoleList)
+                                Post.newPost(userId: user.uid, caption: caption, imageDownloadURL: url.absoluteString, location: locationName, tagPepole: strongSelf.tagPepoleList)
                                 
                                 strongeSelf.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
                             }
@@ -300,7 +336,6 @@ class NewPostViewController: UIViewController {
     @objc private func dismissKeyboard(){
         self.view.endEditing(true)
     }
-    
     
 }
 
@@ -355,7 +390,8 @@ extension NewPostViewController : UITableViewDelegate,UITableViewDataSource {
 
             tagPeopleVC.localizationResouce = localizResoce
 
-            present(tagPeopleVC, animated: true, completion: nil)
+            
+            present(tagPeopleVC, animated: true,completion: nil)
 
         } else {
             
