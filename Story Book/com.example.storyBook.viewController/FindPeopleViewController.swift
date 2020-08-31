@@ -16,7 +16,7 @@ class FindPeopleViewController: UIViewController {
     
     public var localizationResouce : String?
     
-    private var Created a list "nameList" and assigned values for testing. = ["Ashan Anuruddika","Dasun Maduwantha","Terance Wijesuriya"]
+    private var nameList = ["Ashan Anuruddika","Dasun Maduwantha","Terance Wijesuriya"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
