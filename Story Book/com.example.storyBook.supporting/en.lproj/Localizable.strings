@@ -78,6 +78,8 @@
 "LIBRARY_OPTION" = "Import from Library";
 "TAKEPHOTO_OPTION" = "Take Photo";
 "CANCEL_UPLOAD" = "Cancel Upload";
+"Edit_BUTTON" = "Edit";
+"DELETE_BUTTON" = "Delete";
 
 //Mark :- Location English localization identification and values.
 "LOCATION" = "Location";
@@ -88,7 +90,9 @@
 
 "FRIEND_SEARCH_FIELD" = "Search for friends";
 
+"FIRSHT_TABLE_HEADER" = "Tag Friends";
 
+"SECOND_TABLE_HEADER" = "All Friends";
 
 //Mark :- Bar Button localization identification and values.
 
