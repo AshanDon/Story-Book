@@ -113,6 +113,8 @@ class NewPostViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(realoadTagPeopleRow(_:)), name: Notification.Name("RELOAD_TAG_PEOPLE"), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(removeTagPeople(_:)), name: Notification.Name("REMOVE_TAG_PEOPLE"), object: nil)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -207,6 +209,39 @@ class NewPostViewController: UIViewController {
             
             cell.tagPeopleLable.text = nameList!
     
+        }
+        
+    }
+    
+    @objc private func removeTagPeople(_ notification : Notification){
+        
+        let tagList = notification.object as! [String]
+        
+        tagPepoleList = tagList
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        
+        if let cell = mainTableView.cellForRow(at: indexPath) as? TagPeopleTableViewCell ,
+           let languageResouce = localizResoce {
+            
+            var nameList : String?
+            
+            for tagNames in tagPepoleList {
+                
+                if nameList == nil {
+                    
+                    nameList = tagNames
+                    
+                } else {
+                    
+                    nameList = "\(nameList!),\(tagNames)"
+                    
+                }
+                
+            }
+            
+            cell.tagPeopleLable.text = nameList ?? LanguageLocalization.shared.genaretedLanguageLocalization(languageResouce: languageResouce, identification: "TAG_PEOPLE")
+            
         }
         
     }
@@ -386,6 +421,8 @@ extension NewPostViewController : UITableViewDelegate,UITableViewDataSource {
             let tagPeopleVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TagPeopleList") as! FindPeopleViewController
 
             tagPeopleVC.localizationResouce = localizResoce
+            
+            tagPeopleVC.tagPeopleList = tagPepoleList
 
             
             present(tagPeopleVC, animated: true,completion: nil)
