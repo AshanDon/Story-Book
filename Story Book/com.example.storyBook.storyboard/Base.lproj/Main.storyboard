@@ -1386,25 +1386,44 @@
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wLK-dE-cxo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wLK-dE-cxo">
                                 <rect key="frame" x="0.0" y="88" width="414" height="648"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGI-EQ-Vcf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="ojf-I3-Gn0">
+                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="x2T-CQ-hLv"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" name="Tabbar_Background_Color"/>
                         <constraints>
                             <constraint firstItem="wLK-dE-cxo" firstAttribute="top" secondItem="LDd-yg-6tX" secondAttribute="bottom" id="1A5-4f-n0K"/>
                             <constraint firstItem="ymg-Ua-DCx" firstAttribute="trailing" secondItem="wLK-dE-cxo" secondAttribute="trailing" id="C1R-wQ-GR7"/>
+                            <constraint firstItem="SGI-EQ-Vcf" firstAttribute="trailing" secondItem="ymg-Ua-DCx" secondAttribute="trailing" id="CPl-hP-wIf"/>
                             <constraint firstItem="LDd-yg-6tX" firstAttribute="top" secondItem="ymg-Ua-DCx" secondAttribute="top" constant="44" id="WKZ-zb-ZGJ"/>
+                            <constraint firstItem="SGI-EQ-Vcf" firstAttribute="top" secondItem="ymg-Ua-DCx" secondAttribute="top" id="aFU-Oi-ZeA"/>
                             <constraint firstItem="wLK-dE-cxo" firstAttribute="leading" secondItem="ymg-Ua-DCx" secondAttribute="leading" id="iYb-AN-UfK"/>
+                            <constraint firstItem="LDd-yg-6tX" firstAttribute="top" secondItem="SGI-EQ-Vcf" secondAttribute="bottom" id="pmr-DL-iRc"/>
                             <constraint firstItem="ymg-Ua-DCx" firstAttribute="bottom" secondItem="wLK-dE-cxo" secondAttribute="bottom" id="rIM-fj-IuZ"/>
+                            <constraint firstItem="SGI-EQ-Vcf" firstAttribute="leading" secondItem="ymg-Ua-DCx" secondAttribute="leading" id="tR1-6Q-gW2"/>
                             <constraint firstItem="LDd-yg-6tX" firstAttribute="leading" secondItem="ymg-Ua-DCx" secondAttribute="leading" id="vb3-Xk-2Q9"/>
                             <constraint firstItem="LDd-yg-6tX" firstAttribute="trailing" secondItem="ymg-Ua-DCx" secondAttribute="trailing" id="x93-5a-mEd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ymg-Ua-DCx"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WKZ-zb-ZGJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="editButton" destination="x2T-CQ-hLv" id="Vr9-Wm-uDh"/>
                         <outlet property="friendSearchField" destination="LDd-yg-6tX" id="g5f-7z-9Ar"/>
+                        <outlet property="navigationBar" destination="SGI-EQ-Vcf" id="8JF-Le-O2k"/>
                         <outlet property="personTableView" destination="wLK-dE-cxo" id="Pge-eV-qHl"/>
                     </connections>
                 </viewController>
