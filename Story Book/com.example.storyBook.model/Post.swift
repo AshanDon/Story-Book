@@ -40,6 +40,10 @@ class Post {
                                     ]
         
         Post.collection.updateChildValues(["\(key)" : post])
+        
+        let profileFeedRef = ProfileModel.profileFeeds
+        
+        profileFeedRef.child(userId).updateChildValues(["\(key)" : post])
                                      
     }
     
@@ -61,17 +65,17 @@ class Post {
         
         guard let date = postValue["date"] as? Double else { return nil}
         
-        guard let userId = postValue["user_Id"] as? String else { return nil}
+        guard let userId = postValue["user"] as? String else { return nil}
         
         guard let caption = postValue["caption"] as? String else { return nil}
         
-        guard let image = postValue["post_Image"] as? String else { return nil }
+        guard let image = postValue["image"] as? String else { return nil }
         
         guard let postImage = URL(string: image) else { return nil}
         
         guard let location = postValue["location"] as? String else { return nil}
         
-        guard let tagPepole = postValue["tagPepole"] as? [String] else { return nil}
+        guard let tagPepole = postValue["pepole"] as? [String] else { return nil}
         
         self.postDate = Date.init(timeIntervalSince1970: date)
         
