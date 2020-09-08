@@ -44,7 +44,7 @@ class NewPostViewController: UIViewController {
     
     private var storageUploadTask : StorageUploadTask?
     
-    private var tagPepoleList = [String]()
+    private var tagPeopleList : [String] = []
     
     //Created a TouchView
     lazy var touchView : UIView = {
@@ -185,7 +185,7 @@ class NewPostViewController: UIViewController {
         
         let details = notification.object as! String
         
-        tagPepoleList.append(details)
+        tagPeopleList.append(details)
         
         let indexPath = IndexPath(row: 0, section: 0)
 
@@ -193,7 +193,7 @@ class NewPostViewController: UIViewController {
             
             var nameList : String?
             
-            for tagNames in tagPepoleList {
+            for tagNames in tagPeopleList {
 
                 if nameList == nil {
                     
@@ -217,7 +217,7 @@ class NewPostViewController: UIViewController {
         
         let tagList = notification.object as! [String]
         
-        tagPepoleList = tagList
+        tagPeopleList = tagList
         
         let indexPath = IndexPath(row: 0, section: 0)
         
@@ -226,7 +226,7 @@ class NewPostViewController: UIViewController {
             
             var nameList : String?
             
-            for tagNames in tagPepoleList {
+            for tagNames in tagPeopleList {
                 
                 if nameList == nil {
                     
@@ -327,7 +327,13 @@ class NewPostViewController: UIViewController {
                                     
                                 }
                                 
-                                Post.newPost(userId: user.uid, caption: caption, imageDownloadURL: url.absoluteString, location: locationName, tagPepole: strongSelf.tagPepoleList)
+                                if strongSelf.tagPeopleList.count == 0 {
+                                    
+                                    strongSelf.tagPeopleList.append("")
+                                    
+                                }
+                                
+                                Post.newPost(userId: user.uid, caption: caption, imageDownloadURL: url.absoluteString, location: locationName, tagPepole: strongSelf.tagPeopleList)
                                 
                                 strongeSelf.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
                             }
@@ -422,7 +428,7 @@ extension NewPostViewController : UITableViewDelegate,UITableViewDataSource {
 
             tagPeopleVC.localizationResouce = localizResoce
             
-            tagPeopleVC.tagPeopleList = tagPepoleList
+            tagPeopleVC.tagPeopleList = tagPeopleList
 
             
             present(tagPeopleVC, animated: true,completion: nil)
