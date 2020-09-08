@@ -10,6 +10,8 @@ import UIKit
 
 import FirebaseAuth
 
+import FirebaseDatabase
+
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -22,7 +24,19 @@ class HomeViewController: UIViewController {
     
     let data1 : [UIImage] = [UIImage(named: "Tabbar_Profile_Icon")!]
     
-    let data2 : [UIImage] = [UIImage(named: "Tabbar_Profile_Icon")!]
+    var postList : NSMutableArray = []
+    
+    var profileModel : ProfileModel?
+    
+    let paginationCount : UInt = 5
+    
+    var userPostsReferance : DatabaseReference? {
+        
+        guard let userId = Auth.auth().currentUser?.uid else { return nil}
+        
+        return ProfileModel.profileFeeds.child(userId)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +60,8 @@ class HomeViewController: UIViewController {
         
         //Add Friends Post Xib File
         friendPostCollectionView.register(UINib(nibName: "FriendPostXib", bundle: nil), forCellWithReuseIdentifier: "FriendPost")
+        
+        getPosts()
         
     }
     
@@ -138,6 +154,32 @@ class HomeViewController: UIViewController {
         
         self.present(addStoryViewController, animated: true, completion: nil)
     }
+
+    private func getPosts(){
+        
+        let postReferance = Database.database().reference().child("posts").queryOrderedByKey().queryLimited(toLast: paginationCount)
+        
+        postReferance.observeSingleEvent(of: .value) { [weak self] (snapshot) in
+            
+            guard let strongeSelf = self else { return }
+            
+            for item in snapshot.children {
+                
+                guard let snapshot = item as? DataSnapshot else { continue }
+                
+                guard let post = Post(snapshot) else { continue }
+                
+                strongeSelf.postList.insert(post, at: 0)
+                
+            }
+            
+            DispatchQueue.main.async {
+                
+                strongeSelf.friendPostCollectionView.reloadData()
+                
+            }
+        }
+    }
     
 }
 
@@ -151,7 +193,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             
         } else {
             
-            return data2.count
+            return postList.count
             
         }
         
@@ -168,6 +210,35 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         } else {
             
             let cellDetails = friendPostCollectionView.dequeueReusableCell(withReuseIdentifier: "FriendPost", for: indexPath) as! FriendPostCollectionViewCell
+            
+            let postDetails = postList[indexPath.row] as! Post
+
+            cellDetails.postImage.sd_cancelCurrentImageLoad()
+
+            cellDetails.postImage.sd_setImage(with: postDetails.imageDownloadURL, completed: nil)
+
+            let dateFormater = DateFormatter()
+            
+            dateFormater.dateFormat = "dd MMM,yyyy"
+            
+            if postDetails.location.isEmpty {
+                
+                cellDetails.locationLabel.text = dateFormater.string(from: postDetails.postDate)
+                
+            } else {
+                
+                cellDetails.locationLabel.text = "\(postDetails.location) \(dateFormater.string(from: postDetails.postDate))"
+                
+            }
+            
+            
+            
+            cellDetails.userRef = ProfileModel.collection.child(postDetails.userId)
+            
+            cellDetails.tagFriendsList = postDetails.tagPepole
+            
+            cellDetails.captionLabel.text = postDetails.caption
+            
             return cellDetails
             
         }
