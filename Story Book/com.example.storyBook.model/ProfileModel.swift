@@ -35,6 +35,16 @@ class ProfileModel {
         }
     }
     
+    static var profileManagerFeeds : DatabaseReference {
+        
+        get {
+            
+            return Database.database().reference().child("ProfileManager")
+            
+        }
+        
+    }
+    
     var firstName : String = ""
     
     var lastName : String = ""
@@ -44,6 +54,8 @@ class ProfileModel {
     var country : String = ""
     
     var profileImage : URL?
+    
+    var profileId : String = ""
     
     init?(_ snapshot : DataSnapshot) {
         
@@ -62,6 +74,9 @@ class ProfileModel {
             self.profileImage = URL(string: profileImage)
             
         }
+        
+        self.profileId = snapshot.key
+        
     }
 
 }
