@@ -134,6 +134,9 @@ class NewPostViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIWindow.keyboardDidShowNotification, object: nil)
         
         NotificationCenter.default.removeObserver(self, name: UIWindow.keyboardDidHideNotification, object: nil)
+        
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("REFRESH_PAGE"), object: nil)
+        
     }
 
     @objc private func keyboardWasShow(notification : Notification) {
@@ -334,6 +337,8 @@ class NewPostViewController: UIViewController {
                                 }
                                 
                                 Post.newPost(userId: user.uid, caption: caption, imageDownloadURL: url.absoluteString, location: locationName, tagPepole: strongSelf.tagPeopleList)
+                                
+                                NotificationCenter.default.post(name: Notification.Name("REFRESH_PAGE"), object: nil)
                                 
                                 strongeSelf.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
                             }
