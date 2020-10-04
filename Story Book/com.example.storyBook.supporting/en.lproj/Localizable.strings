@@ -94,6 +94,14 @@
 
 "SECOND_TABLE_HEADER" = "All Friends";
 
+//Mark :- All Friends English localization identification and values.
+
+"NAVI_BAR_TITLE" = "All Friend's";
+
+"FOLLOW" = "Follow";
+
+"UNFOLLOW" = "Unfollow";
+
 //Mark :- Bar Button localization identification and values.
 
 "DONE_BARBUTTON_ITEM" = "Done";
