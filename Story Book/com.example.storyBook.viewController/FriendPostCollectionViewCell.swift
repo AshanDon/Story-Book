@@ -125,6 +125,10 @@ class FriendPostCollectionViewCell: UICollectionViewCell {
             
             profileImage.sd_setImage(with: imageURL, completed: nil)
             
+        } else {
+            
+            profileImage.image = UIImage(named: "Tabbar_Profile_Icon")
+            
         }
         
         loadCurrentProfileImage()
