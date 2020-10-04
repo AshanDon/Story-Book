@@ -30,12 +30,16 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var profileImageView: UIImageView!
     
+    @IBOutlet weak var postCountLabel: UILabel!
+    
     
     public var localizationResouce : String?
     
     private let imagePicker = UIImagePickerController()
     
     private var storageUploadTask : StorageUploadTask?
+    
+    private let userPostList : NSMutableArray = []
     
     lazy var progressIndicator : UIProgressView = {
         
@@ -74,8 +78,6 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate {
         return _cancelButton
         
     }()
-    
-    let data : [UIImage] = [UIImage(named: "Example")!,UIImage(named: "Example")!,UIImage(named: "Example")!,UIImage(named: "Example")!]
     
     //Added the profileFeed proparty value from ProfileModel.
     var userProfileRef : DatabaseReference? {
@@ -136,6 +138,10 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate {
         cancelButton.isHidden = true
         
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
+        
+        loadUserPost()
+        
+        getUserPostCount()
         
     }
     
@@ -449,18 +455,67 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate {
         }
         
     }
+    
+    private func loadUserPost(){
+        
+        userProfileRef?.observe(.value, with: { [weak self] (snapshot) in
+            
+            guard let strongeSelf = self else { return }
+            
+            for getData in snapshot.children {
+                
+                guard let snapshot = getData as? DataSnapshot else { return }
+                
+                if let postModel = Post(snapshot) {
+                    
+                    strongeSelf.userPostList.insert(postModel, at: 0)
+                    
+                }
+            }
+            
+            DispatchQueue.main.async {
+                
+                strongeSelf.myPostCollectionView.reloadData()
+                
+                strongeSelf.getUserPostCount()
+            }
+        })
+        
+    }
+    
+    private func getUserPostCount() {
+        
+        postCountLabel.text = "\(userPostList.count)"
+        
+        
+    }
 
 }
 
 extension ProfileViewController : UICollectionViewDelegate,UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        
+        return userPostList.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myPostCell = myPostCollectionView.dequeueReusableCell(withReuseIdentifier: "MyPostCell", for: indexPath) as! MyPostCollectionViewCell
-        myPostCell.myPostImageView.image = data[indexPath.row]
+        
+        let post = userPostList[indexPath.row] as! Post
+        
+        DispatchQueue.main.async {
+            
+            if let imageURL = post.imageDownloadURL {
+                
+                myPostCell.myPostImageView.sd_cancelCurrentImageLoad()
+                
+                myPostCell.myPostImageView.sd_setImage(with: imageURL, completed: nil)
+                
+            }
+            
+        }
         return myPostCell
     }
 }
