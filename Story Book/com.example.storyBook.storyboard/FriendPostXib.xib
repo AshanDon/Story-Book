@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -160,7 +161,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iID-LK-5gs">
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iID-LK-5gs">
                                 <rect key="frame" x="15" y="454" width="116" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="rC4-ep-ksl"/>
@@ -216,13 +217,13 @@
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="rks-UH-K2a" secondAttribute="trailing" id="H5Q-Mi-EDr"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="rks-UH-K2a" secondAttribute="bottom" id="RdV-zW-mVn"/>
                 <constraint firstItem="rks-UH-K2a" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cQu-Nh-PSg"/>
                 <constraint firstItem="rks-UH-K2a" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yr4-dg-GlU"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="125" height="302"/>
             <connections>
                 <outlet property="CurrentUserImage" destination="1M9-RZ-cqE" id="Hdn-Hy-Fde"/>
