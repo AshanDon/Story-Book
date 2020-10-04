@@ -101,6 +101,15 @@
 "FOLLOWER_LABEL" = "අනුගාමිකයන්";
 "FOLLOWING_LABEL" = "අනුගමනය";
 
+//Mark :- All Friends View Sinhala localization identification and values.
+
+"NAVI_BAR_TITLE" = "නව මිතුරන්";
+
+"FOLLOW" = "අනුගමනය කරන්න";
+
+"UNFOLLOW" = "අනුගමනය නොකරන්න";
+
+
 
 //Mark :- Notification localization identification and values.
 
