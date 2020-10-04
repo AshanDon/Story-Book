@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
     
     var profileModel : ProfileModel?
     
-    let paginationCount : UInt = 5
+    let paginationCount : UInt = 10
     
     var userPostsReferance : DatabaseReference? {
         
@@ -63,6 +63,8 @@ class HomeViewController: UIViewController {
         
         getPosts()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(getPosts), name: Notification.Name("REFRESH_PAGE"), object: nil)
+        
     }
     
     @IBAction func profileTabButtonDidTouch(_ sender: Any) {
@@ -89,6 +91,11 @@ class HomeViewController: UIViewController {
         
     }
     
+    @IBAction func allFriendDidTouch(_ sender: Any) {
+        
+        performSegue(withIdentifier: "HomeToAllFriend", sender: localizeResouce)
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -134,6 +141,16 @@ class HomeViewController: UIViewController {
             
             break
             
+        case "HomeToAllFriend" :
+            
+            guard let allFriendDestination = segue.destination as? AllFriendsTableViewController else { return }
+            
+            guard let sendValue = sender as? String else { return }
+            
+            allFriendDestination.localizationResouce = sendValue
+            
+            break
+            
         default:
             break
         }
@@ -155,7 +172,7 @@ class HomeViewController: UIViewController {
         self.present(addStoryViewController, animated: true, completion: nil)
     }
 
-    private func getPosts(){
+    @objc private func getPosts(){
         
         let postReferance = Database.database().reference().child("posts").queryOrderedByKey().queryLimited(toLast: paginationCount)
         
