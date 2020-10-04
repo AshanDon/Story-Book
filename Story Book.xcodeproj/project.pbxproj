@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630094F3250CF8CD00070346 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630094F2250CF8CD00070346 /* ProfileManager.swift */; };
 		631D96EE24E58F7C00C18461 /* AddStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D96ED24E58F7C00C18461 /* AddStoryViewController.swift */; };
 		631D96F024E5A60F00C18461 /* StoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D96EF24E5A60F00C18461 /* StoryPostViewController.swift */; };
 		6328B7E524E411740023DFFB /* StoryProfileReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6328B7E324E411740023DFFB /* StoryProfileReusableView.swift */; };
@@ -14,6 +15,9 @@
 		636DD9AC24FBD54000311652 /* FindPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DD9AB24FBD54000311652 /* FindPeopleViewController.swift */; };
 		636DD9B424FBE18D00311652 /* FindPeopleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636DD9B324FBE18D00311652 /* FindPeopleCell.xib */; };
 		636DD9B624FBE39800311652 /* FindPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DD9B524FBE39800311652 /* FindPeopleCell.swift */; };
+		637716F525092BDF0027332A /* FriendsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637716F325092BDF0027332A /* FriendsViewCell.swift */; };
+		637716F625092BDF0027332A /* FriendsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637716F425092BDF0027332A /* FriendsViewCell.xib */; };
+		63CCFBF6250826BF00D678A8 /* AllFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CCFBF5250826BF00D678A8 /* AllFriendsTableViewController.swift */; };
 		8E03266C24A1190900F2E909 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03266B24A1190900F2E909 /* Constant.swift */; };
 		8E1C7F1E248EC0B3008FA398 /* MediaMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C7F1D248EC0B3008FA398 /* MediaMainViewController.swift */; };
 		8E1C7F20248ECEA8008FA398 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C7F1F248ECEA8008FA398 /* NotificationViewController.swift */; };
@@ -81,6 +85,7 @@
 
 /* Begin PBXFileReference section */
 		62C8526834EE9365CD5E6E54 /* Pods-Story Book.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Story Book.release.xcconfig"; path = "Target Support Files/Pods-Story Book/Pods-Story Book.release.xcconfig"; sourceTree = "<group>"; };
+		630094F2250CF8CD00070346 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		631D96ED24E58F7C00C18461 /* AddStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryViewController.swift; sourceTree = "<group>"; };
 		631D96EF24E5A60F00C18461 /* StoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostViewController.swift; sourceTree = "<group>"; };
 		6328B7E324E411740023DFFB /* StoryProfileReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProfileReusableView.swift; sourceTree = "<group>"; };
@@ -88,6 +93,9 @@
 		636DD9AB24FBD54000311652 /* FindPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPeopleViewController.swift; sourceTree = "<group>"; };
 		636DD9B324FBE18D00311652 /* FindPeopleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindPeopleCell.xib; sourceTree = "<group>"; };
 		636DD9B524FBE39800311652 /* FindPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPeopleCell.swift; sourceTree = "<group>"; };
+		637716F325092BDF0027332A /* FriendsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewCell.swift; sourceTree = "<group>"; };
+		637716F425092BDF0027332A /* FriendsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsViewCell.xib; sourceTree = "<group>"; };
+		63CCFBF5250826BF00D678A8 /* AllFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFriendsTableViewController.swift; sourceTree = "<group>"; };
 		822FD580ABBB460A998B3F6A /* Pods_Story_Book.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Story_Book.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E03266B24A1190900F2E909 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		8E1C7F1D248EC0B3008FA398 /* MediaMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaMainViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +211,8 @@
 				631D96EF24E5A60F00C18461 /* StoryPostViewController.swift */,
 				636DD9AB24FBD54000311652 /* FindPeopleViewController.swift */,
 				636DD9B524FBE39800311652 /* FindPeopleCell.swift */,
+				63CCFBF5250826BF00D678A8 /* AllFriendsTableViewController.swift */,
+				637716F325092BDF0027332A /* FriendsViewCell.swift */,
 			);
 			path = com.example.storyBook.viewController;
 			sourceTree = "<group>";
@@ -212,6 +222,7 @@
 			children = (
 				8E86AD5224CF2F5700C80CC8 /* ProfileModel.swift */,
 				63656D2024F2F262007E518C /* Post.swift */,
+				630094F2250CF8CD00070346 /* ProfileManager.swift */,
 			);
 			path = com.example.storyBook.model;
 			sourceTree = "<group>";
@@ -269,6 +280,7 @@
 				8E8D0BC124AFC1770010A7B0 /* TagPeopleTableViewCell.xib */,
 				8EBF22CA24B0AC8000B68549 /* AddLocationViewCell.xib */,
 				636DD9B324FBE18D00311652 /* FindPeopleCell.xib */,
+				637716F425092BDF0027332A /* FriendsViewCell.xib */,
 			);
 			path = com.example.storyBook.storyboard;
 			sourceTree = "<group>";
@@ -316,7 +328,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Ashan;
 				TargetAttributes = {
 					8EEE7D91248829A2008D3A42 = {
@@ -348,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				637716F625092BDF0027332A /* FriendsViewCell.xib in Resources */,
 				8E7DC190248FFD4B00DEC14E /* FollowedNotificationViewCell.xib in Resources */,
 				636DD9B424FBE18D00311652 /* FindPeopleCell.xib in Resources */,
 				8EEE7DA5248829CD008D3A42 /* LaunchScreen.storyboard in Resources */,
@@ -445,6 +458,7 @@
 				8EF06CAA249E8694001EE9C3 /* Validation.swift in Sources */,
 				8E7DC18C248FECDF00DEC14E /* NotificationViewCell.swift in Sources */,
 				8E7C4764248AD31B00A54086 /* FriendStoryCollectionViewCell.swift in Sources */,
+				630094F3250CF8CD00070346 /* ProfileManager.swift in Sources */,
 				8E1C7F20248ECEA8008FA398 /* NotificationViewController.swift in Sources */,
 				8EEE7D96248829A3008D3A42 /* AppDelegate.swift in Sources */,
 				8EFFEC9C249151DA00304024 /* FollowingNotificationViewCell.swift in Sources */,
@@ -457,6 +471,7 @@
 				8E74B38C249366CC00A2B4A4 /* ReceivingMessageViewCell.swift in Sources */,
 				8E1C7F1E248EC0B3008FA398 /* MediaMainViewController.swift in Sources */,
 				636DD9B624FBE39800311652 /* FindPeopleCell.swift in Sources */,
+				63CCFBF6250826BF00D678A8 /* AllFriendsTableViewController.swift in Sources */,
 				63656D2124F2F262007E518C /* Post.swift in Sources */,
 				636DD9AC24FBD54000311652 /* FindPeopleViewController.swift in Sources */,
 				8EBF22CB24B0AC8000B68549 /* AddLocationViewCell.swift in Sources */,
@@ -470,6 +485,7 @@
 				8E8D0BC524AFCCFA0010A7B0 /* NewPostViewController.swift in Sources */,
 				8EE4ABC2248EA4F2004D74A8 /* ImageGalleryCollectionViewCell.swift in Sources */,
 				8E7C4769248ADE3300A54086 /* FriendPostCollectionViewCell.swift in Sources */,
+				637716F525092BDF0027332A /* FriendsViewCell.swift in Sources */,
 				8E7C4766248AD48700A54086 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +550,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -595,6 +612,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
