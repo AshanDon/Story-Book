@@ -26,7 +26,7 @@ class ProfileManager {
     
     var status : String = ""
     
-    var date : Date = Date()
+    var date : Double = 0.0
     
     var active : String = ""
     
@@ -46,7 +46,7 @@ class ProfileManager {
 
         self.status = status
 
-        self.date = Date.init(timeIntervalSince1970: date)
+        self.date = date
 
         self.active = active
         
@@ -65,6 +65,15 @@ class ProfileManager {
         let profileManageFeed = ProfileModel.profileManagerFeeds
         
         profileManageFeed.child(currentUserId).updateChildValues([followerId : followDetails])
+        
+    }
+    
+    
+    static public func unfollowFriend(_ unfollowId : String, _ currentUserId : String){
+        
+        let childUpdates = ["/\(currentUserId)/\(unfollowId)/Status" : "UNFOLLOW"]
+        
+        colloection.updateChildValues(childUpdates)
         
     }
 }
