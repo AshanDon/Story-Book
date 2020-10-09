@@ -24,6 +24,14 @@ class FriendsViewCell: UITableViewCell {
     
     public var localizationResouce : String?
     
+    var currentUserId : String {
+        
+        guard let currentUserId = Auth.auth().currentUser?.uid else { return "" }
+        
+        return currentUserId
+        
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,13 +51,26 @@ class FriendsViewCell: UITableViewCell {
     
     @IBAction func followButtonPressed(_ sender: Any) {
         
-        if let profileId = selectedProfileId {
+        if let titleName = followButton.titleLabel?.text,
+           titleName.elementsEqual("FOLLOW") || titleName.elementsEqual("අනුගමනය කරන්න") {
             
-            guard let currentUserId = Auth.auth().currentUser?.uid else { return }
+            if let profileId = selectedProfileId {
+                
+                ProfileManager.followFriend(profileId, currentUserId)
+                
+            }
             
-            ProfileManager.followFriend(profileId, currentUserId)
+        } else {
             
+            if let profileId = selectedProfileId {
+                
+                ProfileManager.unfollowFriend(profileId, currentUserId)
+                
+                NotificationCenter.default.post(name: NSNotification.Name("REFRESH_TABLE"), object: profileId)
+                
+            }
         }
+        
         
     }
     
@@ -58,6 +79,18 @@ class FriendsViewCell: UITableViewCell {
         if let languageResouce = localizationResouce {
             
             let buttonTitle = LanguageLocalization.shared.genaretedLanguageLocalization(languageResouce: languageResouce, identification: "FOLLOW")
+            
+            followButton.setTitle(buttonTitle, for: .normal)
+            
+        }
+        
+    }
+    
+    public func setUnfollowTitle(){
+        
+        if let languageResouce = localizationResouce {
+            
+            let buttonTitle = LanguageLocalization.shared.genaretedLanguageLocalization(languageResouce: languageResouce, identification: "UNFOLLOW")
             
             followButton.setTitle(buttonTitle, for: .normal)
             
