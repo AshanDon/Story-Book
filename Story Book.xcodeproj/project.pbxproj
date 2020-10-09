@@ -10,6 +10,7 @@
 		630094F3250CF8CD00070346 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630094F2250CF8CD00070346 /* ProfileManager.swift */; };
 		631D96EE24E58F7C00C18461 /* AddStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D96ED24E58F7C00C18461 /* AddStoryViewController.swift */; };
 		631D96F024E5A60F00C18461 /* StoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D96EF24E5A60F00C18461 /* StoryPostViewController.swift */; };
+		632044A9252B6F370063A901 /* AllFollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632044A8252B6F370063A901 /* AllFollowersViewController.swift */; };
 		6328B7E524E411740023DFFB /* StoryProfileReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6328B7E324E411740023DFFB /* StoryProfileReusableView.swift */; };
 		63656D2124F2F262007E518C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63656D2024F2F262007E518C /* Post.swift */; };
 		636DD9AC24FBD54000311652 /* FindPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DD9AB24FBD54000311652 /* FindPeopleViewController.swift */; };
@@ -88,6 +89,7 @@
 		630094F2250CF8CD00070346 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		631D96ED24E58F7C00C18461 /* AddStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryViewController.swift; sourceTree = "<group>"; };
 		631D96EF24E5A60F00C18461 /* StoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostViewController.swift; sourceTree = "<group>"; };
+		632044A8252B6F370063A901 /* AllFollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFollowersViewController.swift; sourceTree = "<group>"; };
 		6328B7E324E411740023DFFB /* StoryProfileReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProfileReusableView.swift; sourceTree = "<group>"; };
 		63656D2024F2F262007E518C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		636DD9AB24FBD54000311652 /* FindPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPeopleViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				636DD9B524FBE39800311652 /* FindPeopleCell.swift */,
 				63CCFBF5250826BF00D678A8 /* AllFriendsTableViewController.swift */,
 				637716F325092BDF0027332A /* FriendsViewCell.swift */,
+				632044A8252B6F370063A901 /* AllFollowersViewController.swift */,
 			);
 			path = com.example.storyBook.viewController;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				8EEE7D98248829A3008D3A42 /* SceneDelegate.swift in Sources */,
 				8EAA1F0A2497E94100296A9F /* SignUpViewController.swift in Sources */,
 				8EFFECA324918CE800304024 /* ChatListViewController.swift in Sources */,
+				632044A9252B6F370063A901 /* AllFollowersViewController.swift in Sources */,
 				8E8D0BC224AFC1770010A7B0 /* TagPeopleTableViewCell.swift in Sources */,
 				8E2553BD248D503F00045873 /* ProfileViewController.swift in Sources */,
 				8E8D0BC524AFCCFA0010A7B0 /* NewPostViewController.swift in Sources */,
