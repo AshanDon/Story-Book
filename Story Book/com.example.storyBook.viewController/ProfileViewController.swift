@@ -32,6 +32,9 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var postCountLabel: UILabel!
     
+    @IBOutlet weak var followerCountLabel: UILabel!
+    
+    @IBOutlet weak var followerView : UIView!
     
     public var localizationResouce : String?
     
@@ -80,12 +83,19 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate {
     }()
     
     //Added the profileFeed proparty value from ProfileModel.
+    
+    var currentUserId : String {
+        
+        guard let userId = Auth.auth().currentUser?.uid else { return ""}
+        
+        return userId
+        
+    }
+    
     var userProfileRef : DatabaseReference? {
         
-        guard let userId = Auth.auth().currentUser?.uid else { return nil}
-        
-        return ProfileModel.profileFeeds.child(userId)
-        
+        return ProfileModel.profileFeeds.child(currentUserId)
+    
     }
     
     override func viewDidLoad() {
@@ -143,8 +153,28 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate {
         
         getUserPostCount()
         
+        getFollowerCount()
+        
+        let followeViewTGR = UITapGestureRecognizer(target: self, action: #selector(tapFollowerView))
+        
+        followerView.addGestureRecognizer(followeViewTGR)
+        
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshFollowerCount), name: NSNotification.Name("REFRESH_FOLLOWERS_COUNT"), object: nil)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("REFRESH_FOLLOWERS_COUNT"), object: nil)
+        
+    }
 
     @IBAction func menuButtonDidTouch(_ sender: UIButton) {
         
@@ -487,6 +517,53 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate {
         
         postCountLabel.text = "\(userPostList.count)"
         
+        
+    }
+    
+    private func getFollowerCount() {
+        
+        var followerCount : Int = 0
+        
+        ProfileManager.colloection.child(currentUserId).observeSingleEvent(of: .value) { [weak self] (snapshot) in
+            
+            guard let strongeSelf = self else { return }
+            
+            for data in snapshot.children {
+                
+                guard let snapshot = data as? DataSnapshot else { continue }
+                
+                guard let profileManager = ProfileManager(snapshot) else { continue }
+                
+                if (profileManager.status == "FOLLOW" || profileManager.status == "අනුගමනය කරන්න") {
+                    
+                    followerCount += 1
+                    
+                }
+            }
+            
+            strongeSelf.followerCountLabel.text = "\(followerCount)"
+            
+        }
+    
+    }
+    
+    @objc private func tapFollowerView(){
+        
+        let followerVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "FOLLOWERS_VIEW") as! AllFollowersViewController
+        
+        followerVC.modalPresentationStyle = .pageSheet
+        
+        followerVC.modalTransitionStyle = .coverVertical
+        
+        followerVC.localizationResouce = localizationResouce
+        
+        self.present(followerVC, animated: true, completion: nil)
+        
+    }
+    
+    @objc private func refreshFollowerCount(){
+        
+        getFollowerCount()
         
     }
 
